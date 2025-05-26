@@ -3,6 +3,7 @@
 {% block title %}Tableau de Bord{% endblock %}
 
 {% block content %}
+
 <div class="row">
     <div class="col-xl-12">
         <div class="card mb-4">
@@ -89,7 +90,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="view-content statut-views chart-view active">
-                                    <div class="chart-container">
+                                    <div class="chart-container" style="height: 300px;">
                                         <canvas id="statutChart"></canvas>
                                     </div>
                                 </div>
@@ -180,7 +181,7 @@
                             </div>
                             <div class="card-body">
                                 <div class="view-content type-views chart-view active">
-                                    <div class="chart-container">
+                                    <div class="chart-container" style="height: 300px;">
                                         <canvas id="typeChart"></canvas>
                                     </div>
                                 </div>
@@ -210,7 +211,7 @@
                                     </div>
                                 </div>
                                 <div class="view-content type-views pie-view d-none">
-                                    <div class="chart-container">
+                                    <div class="chart-container" style="height: 300px;">
                                         <canvas id="typePieChart"></canvas>
                                     </div>
                                 </div>
@@ -218,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-
+                <div class="row">
                     <div class="col-xl-12">
                         <div class="card mb-4">
                             <div class="card-header d-flex justify-content-between align-items-center">
@@ -258,7 +259,7 @@
                                     </div>
                                 </div>
                                 <div class="view-content employes-views chart-view d-none">
-                                    <div class="chart-container">
+                                    <div class="chart-container" style="height: 300px;">
                                         <canvas id="employesBarChart"></canvas>
                                     </div>
                                 </div>
@@ -269,7 +270,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row ">
                     <div class="col-xl-12">
                         <div class="card mb-4">
                             <div class="card-header d-flex justify-content-between align-items-center">
@@ -329,9 +330,16 @@
                                         </table>
                                     </div>
                                 </div>
-                                <div class="view-content materiel-dir-views chart-view d-none">
-                                    <div class="chart-container">
-                                        <canvas id="materielDirectionBarChart"></canvas>
+                                <div class="view-content materiel-dir-views chart-view d-none ">
+                                    <div class="chart-container overflow-auto">
+                                        <h6 class="mb-3">Affectations dans Directions</h6>
+                                        <div style="min-height: 200px; margin-bottom: 20px;">
+                                            <canvas id="materielDirectionBarChart"></canvas>
+                                        </div>
+                                        <h6 class="mb-3">Affectations dans Services</h6>
+                                        <div style="min-height: 200px;">
+                                            <canvas id="materielServiceBarChart"></canvas>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="view-content materiel-dir-views cards-view d-none">
@@ -396,6 +404,9 @@
         padding: 15px;
         max-height: 400px;
         overflow-y: auto;
+        border: 1px solid #e9ecef;
+        border-radius: 4px;
+        background-color: #fff;
     }
     .tree-root {
         list-style: none;
@@ -403,19 +414,22 @@
         margin: 0;
     }
     .tree-node {
-        padding: 8px;
+        padding: 10px;
         margin: 5px 0;
         border-radius: 4px;
+        transition: background-color 0.2s;
     }
     .direction-node {
         background-color: #f8f9fa;
         font-weight: bold;
         display: flex;
         align-items: center;
+        border-left: 4px solid #4e73df;
     }
     .service-node {
         background-color: #ffffff;
         border: 1px solid #e9ecef;
+        border-left: 4px solid #1cc88a;
     }
     .collapse-control {
         cursor: pointer;
@@ -423,12 +437,13 @@
         font-size: 1.2em;
         width: 20px;
         text-align: center;
+        color: #4e73df;
     }
     .count-badge {
         background-color: #4e73df;
         color: white;
-        padding: 2px 8px;
-        border-radius: 10px;
+        padding: 3px 10px;
+        border-radius: 12px;
         margin-left: 10px;
         font-size: 0.9em;
     }
@@ -442,6 +457,15 @@
     }
     .direction-label, .service-label {
         flex-grow: 1;
+    }
+    .chart-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+    .chart-container canvas {
+        width: 100% !important;
+        height: auto !important;
     }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -470,6 +494,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 if (viewType === 'chart' && targetGroup === 'materiel-dir-views') {
                     initializeMaterielChart();
+                }
+                if (viewType === 'chart' && targetGroup === 'employes-views') {
+                    initializeEmployesChart();
                 }
             }
         });
@@ -557,176 +584,134 @@ function createEmployeesTreeView() {
 }
 
 function initializeCharts() {
-    const statutCtx = document.getElementById('statutChart').getContext('2d');
-    new Chart(statutCtx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Affectés', 'Non affectés'],
-            datasets: [{
-                data: [{{ articles_affectes | default(0) }}, {{ articles_non_affectes | default(0) }}],
-                backgroundColor: ['#4e73df', '#1cc88a'],
-                hoverBackgroundColor: ['#2e59d9', '#17a673'],
-                hoverBorderColor: 'rgba(234, 236, 244, 1)',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            const label = context.label || '';
-                            const value = context.raw || 0;
-                            return `${label}: ${value}`;
+   const colorPalette = [
+    { bg: '#3b82f6', hover: '#2563eb' },
+    { bg: '#1c8764', hover: '#059669' },
+    { bg: '#821f4e', hover: '#db2777' },
+    { bg: '#f59e0b', hover: '#d97706' },
+    { bg: '#ef4444', hover: '#dc2626' },
+    { bg: '#8b5cf6', hover: '#7c3aed' },
+    { bg: '#06b6d4', hover: '#0891b2' },
+    { bg: '#84cc16', hover: '#65a30d' },
+    { bg: '#f97316', hover: '#ea580c' },
+    { bg: '#64748b', hover: '#475569' },
+];
+
+    const statutCtx = document.getElementById('statutChart')?.getContext('2d');
+    if (statutCtx) {
+        new Chart(statutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Affectés', 'Non affectés'],
+                datasets: [{
+                    data: [{{ articles_affectes | default(0) }}, {{ articles_non_affectes | default(0) }}],
+                    backgroundColor: [colorPalette[0].bg, colorPalette[1].bg],
+                    hoverBackgroundColor: [colorPalette[0].hover, colorPalette[1].hover],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 20 }
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const label = context.label || '';
+                                const value = context.raw || 0;
+                                return `${label}: ${value}`;
+                            }
                         }
                     }
                 }
             }
-        }
-    });
+        });
+    }
 
-    const typeCtx = document.getElementById('typeChart').getContext('2d');
     const typeData = [
         {% for type in repartition_types %}
         { type: "{{ type.Type_Article | default('N/A') }}", count: {{ type[1] | default(0) }} },
         {% endfor %}
     ];
-    new Chart(typeCtx, {
-        type: 'bar',
-        data: {
-            labels: typeData.map(item => item.type),
-            datasets: [{
-                label: 'Nombre',
-                data: typeData.map(item => item.count),
-                backgroundColor: '#4e73df',
-                hoverBackgroundColor: '#2e59d9',
-                borderColor: '#4e73df',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Nombre de matériels'
+    const typeCtx = document.getElementById('typeChart')?.getContext('2d');
+    if (typeCtx && typeData.length) {
+        new Chart(typeCtx, {
+            type: 'bar',
+            data: {
+                labels: typeData.map(item => item.type),
+                datasets: [{
+                    label: 'Nombre',
+                    data: typeData.map(item => item.count),
+                    backgroundColor: colorPalette[0].bg,
+                    hoverBackgroundColor: colorPalette[0].hover,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Nombre de matériels' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Type de matériel' },
+                        ticks: { autoSkip: false, maxRotation: 0, minRotation: 0 }
                     }
                 },
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Type de matériel'
+                plugins: { legend: { display: false } }
+            }
+        });
+    }
+
+    const typePieCtx = document.getElementById('typePieChart')?.getContext('2d');
+    if (typePieCtx && typeData.length) {
+        new Chart(typePieCtx, {
+            type: 'pie',
+            data: {
+                labels: typeData.map(item => item.type),
+                datasets: [{
+                    data: typeData.map(item => item.count),
+                    backgroundColor: colorPalette.map(c => c.bg),
+                    hoverBackgroundColor: colorPalette.map(c => c.hover),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 20 }
                     }
                 }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
             }
-        }
-    });
+        });
+    }
 
-    const typePieCtx = document.getElementById('typePieChart').getContext('2d');
-    new Chart(typePieCtx, {
-        type: 'pie',
-        data: {
-            labels: typeData.map(item => item.type),
-            datasets: [{
-                data: typeData.map(item => item.count),
-                backgroundColor: [
-                    '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b',
-                    '#5a5c69', '#858796', '#6610f2', '#6f42c1', '#fd7e14'
-                ],
-                hoverBackgroundColor: [
-                    '#2e59d9', '#17a673', '#2c9faf', '#dda20a', '#be2617',
-                    '#3a3b45', '#60616f', '#520dc2', '#59359a', '#ca6510'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }
-    });
+    initializeEmployesChart();
+    initializeMaterielChart();
+}
 
-    const serviceData = [
-        {% for service in repartition_services %}
-        { service: "{{ service.Service_Employe | default('N/A') }}", count: {{ service[1] | default(0) }} },
-        {% endfor %}
+function initializeEmployesChart() {
+    const colorPalette = [
+        { bg: '#4e73df', hover: '#2e59d9' },
+        { bg: '#1cc88a', hover: '#17a673' },
+        { bg: '#36b9cc', hover: '#2c9faf' },
+        { bg: '#f6c23e', hover: '#dda20a' },
+        { bg: '#e74a3b', hover: '#be2617' },
+        { bg: '#5a5c69', hover: '#3a3b45' },
+        { bg: '#858796', hover: '#60616f' },
+        { bg: '#6610f2', hover: '#520dc2' },
+        { bg: '#6f42c1', hover: '#59359a' },
+        { bg: '#fd7e14', hover: '#ca6510' }
     ];
-    const serviceBarCtx = document.getElementById('serviceBarChart').getContext('2d');
-    new Chart(serviceBarCtx, {
-        type: 'bar',
-        data: {
-            labels: serviceData.map(item => item.service),
-            datasets: [{
-                label: 'Nombre de matériels',
-                data: serviceData.map(item => item.count),
-                backgroundColor: '#36b9cc',
-                borderColor: '#36b9cc',
-                borderWidth: 1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            indexAxis: 'y',
-            scales: {
-                x: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Nombre de matériels'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
-
-    const servicePieCtx = document.getElementById('servicePieChart').getContext('2d');
-    new Chart(servicePieCtx, {
-        type: 'pie',
-        data: {
-            labels: serviceData.map(item => item.service),
-            datasets: [{
-                data: serviceData.map(item => item.count),
-                backgroundColor: [
-                    '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b',
-                    '#5a5c69', '#858796', '#6610f2', '#6f42c1', '#fd7e14'
-                ],
-                hoverBackgroundColor: [
-                    '#2e59d9', '#17a673', '#2c9faf', '#dda20a', '#be2617',
-                    '#3a3b45', '#60616f', '#520dc2', '#59359a', '#ca6510'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    position: 'right',
-                    align: 'start'
-                }
-            }
-        }
-    });
 
     const employesData = [
         {% for employe in repartition_employes %}
@@ -737,6 +722,7 @@ function initializeCharts() {
         },
         {% endfor %}
     ];
+
     const employesByDirection = {};
     const allServices = new Set();
     employesData.forEach(item => {
@@ -746,53 +732,62 @@ function initializeCharts() {
         employesByDirection[item.direction][item.service] = item.nombre;
         allServices.add(item.service);
     });
-    const directions = Object.keys(employesByDirection);
-    const services = Array.from(allServices);
-    const employesDatasets = services.map((service, index) => {
-        return {
-            label: service,
-            data: directions.map(direction => employesByDirection[direction][service] || 0),
-            backgroundColor: getColor(index),
-            borderColor: getBorderColor(index),
-            borderWidth: 1
-        };
-    });
-    const employesBarCtx = document.getElementById('employesBarChart').getContext('2d');
-    new Chart(employesBarCtx, {
-        type: 'bar',
-        data: {
-            labels: directions,
-            datasets: employesDatasets
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Direction'
+
+    const directions = Object.keys(employesByDirection).filter(d => d !== 'N/A');
+    const services = Array.from(allServices).filter(s => s !== 'N/A');
+
+    const employesDatasets = services.map((service, index) => ({
+        label: service,
+        data: directions.map(direction => employesByDirection[direction][service] || 0),
+        backgroundColor: colorPalette[index % colorPalette.length].bg,
+        hoverBackgroundColor: colorPalette[index % colorPalette.length].hover,
+        borderWidth: 1
+    }));
+
+    const employesBarCtx = document.getElementById('employesBarChart')?.getContext('2d');
+    if (employesBarCtx && directions.length && services.length) {
+        new Chart(employesBarCtx, {
+            type: 'bar',
+            data: {
+                labels: directions,
+                datasets: employesDatasets
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Direction' },
+                        ticks: { autoSkip: false, maxRotation: 0, minRotation: 0 }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: "Nombre d'employés" }
                     }
                 },
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: "Nombre d'employés"
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { boxWidth: 20 }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        intersect: false
                     }
                 }
-            },
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                }
             }
-        }
-    });
-
-    initializeMaterielChart();
+        });
+    } else if (employesBarCtx) {
+        employesBarCtx.canvas.parentNode.innerHTML = '<p class="text-center text-muted">Aucune donnée disponible pour le graphique</p>';
+    }
 }
 
 function initializeMaterielChart() {
+    const colorPalette = [
+        { bg: '#4e73df', hover: '#2e59d9' }, // For Directions
+        { bg: '#1cc88a', hover: '#17a673' }  // For Services
+    ];
+
     const materielDirData = [
         {% for materiel in repartition_materiel_direction_service %}
         {
@@ -802,68 +797,90 @@ function initializeMaterielChart() {
         },
         {% endfor %}
     ];
+
+    // Filter data for Directions (where service is 'N/A')
     const directionData = materielDirData.filter(item => item.direction !== 'N/A' && item.service === 'N/A');
-    const serviceData = materielDirData.filter(item => item.service !== 'N/A' && item.direction === 'N/A');
     const directionLabels = directionData.map(item => item.direction);
+
+    // Filter data for Services (where direction is 'N/A')
+    const serviceData = materielDirData.filter(item => item.service !== 'N/A' && item.direction === 'N/A');
     const serviceLabels = serviceData.map(item => item.service);
-    const materielDirCtx = document.getElementById('materielDirectionBarChart').getContext('2d');
-    new Chart(materielDirCtx, {
-        type: 'bar',
-        data: {
-            labels: [...directionLabels, ...serviceLabels],
-            datasets: [
-                {
-                    label: 'Matériels Affectés',
-                    data: [
-                        ...directionData.map(item => item.affectes),
-                        ...serviceData.map(item => item.affectes)
-                    ],
-                    backgroundColor: '#4e73df',
-                    borderColor: '#4e73df',
+
+    // Chart for Directions
+    const materielDirCtx = document.getElementById('materielDirectionBarChart')?.getContext('2d');
+    if (materielDirCtx && directionLabels.length) {
+        new Chart(materielDirCtx, {
+            type: 'bar',
+            data: {
+                labels: directionLabels,
+                datasets: [{
+                    label: 'Matériels Affectés (Directions)',
+                    data: directionData.map(item => item.affectes),
+                    backgroundColor: colorPalette[0].bg,
+                    hoverBackgroundColor: colorPalette[0].hover,
                     borderWidth: 1
-                }
-            ]
-        },
-        options: {
-            maintainAspectRatio: false,
-            scales: {
-                x: {
-                    title: {
-                        display: true,
-                        text: 'Directions et Services'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Directions' },
+                        ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, font: { size: 10 } }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Nombre de matériels' }
                     }
                 },
-                y: {
-                    beginAtZero: true,
-                    title: {
-                        display: true,
-                        text: 'Nombre de matériels'
-                    }
-                }
-            },
-            plugins: {
-                legend: {
-                    position: 'bottom'
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { mode: 'index', intersect: false }
                 }
             }
-        }
-    });
-}
+        });
+    } else if (materielDirCtx) {
+        materielDirCtx.canvas.parentNode.innerHTML = '<p class="text-center text-muted">Aucune donnée disponible pour les directions</p>';
+    }
 
-function getColor(index) {
-    const colors = [
-        '#4e73df', '#1cc88a', '#36b9cc', '#f6c23e', '#e74a3b',
-        '#5a5c69', '#858796', '#6610f2', '#6f42c1', '#fd7e14'
-    ];
-    return colors[index % colors.length];
-}
-
-function getBorderColor(index) {
-    const colors = [
-        '#2e59d9', '#17a673', '#2c9faf', '#dda20a', '#be2617',
-        '#3a3b45', '#60616f', '#520dc2', '#59359a', '#ca6510'
-    ];
-    return colors[index % colors.length];
+    // Chart for Services
+    const materielServiceCtx = document.getElementById('materielServiceBarChart')?.getContext('2d');
+    if (materielServiceCtx && serviceLabels.length) {
+        new Chart(materielServiceCtx, {
+            type: 'bar',
+            data: {
+                labels: serviceLabels,
+                datasets: [{
+                    label: 'Matériels Affectés (Services)',
+                    data: serviceData.map(item => item.affectes),
+                    backgroundColor: colorPalette[1].bg,
+                    hoverBackgroundColor: colorPalette[1].hover,
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        title: { display: true, text: 'Services' },
+                        ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, font: { size: 10 } }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Nombre de matériels' }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { mode: 'index', intersect: false }
+                }
+            }
+        });
+    } else if (materielServiceCtx) {
+        materielServiceCtx.canvas.parentNode.innerHTML = '<p class="text-center text-muted">Aucune donnée disponible pour les services</p>';
+    }
 }
 </script>
 {% endblock %}

@@ -189,3 +189,9 @@ footer .bg-primary{
 
 }
 
+
+row .overflow-auto{
+    overflow: auto;
+    height: 700px !important;
+
+}
