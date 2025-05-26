@@ -10,6 +10,10 @@ from functools import wraps
 from io import BytesIO
 import pandas as pd
 from datetime import timedelta
+from barcode import Code128
+from barcode.writer import ImageWriter
+from PIL import Image
+
 # App setup
 app = Flask(__name__, static_folder='static')
 app.secret_key = os.urandom(24).hex()
@@ -20,6 +24,11 @@ app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
 bcrypt = Bcrypt(app)
+
+app.config['BARCODE_FOLDER'] = 'static/barcodes'
+
+os.makedirs(app.config['BARCODE_FOLDER'], exist_ok=True)
+
 
 logging.basicConfig(level=logging.DEBUG, filename='app.log', filemode='a',
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -54,7 +63,6 @@ def get_server_timestamp():
 
 
 def update_article_status(article_id, conn, cursor):
-    """Update Statut_Article based on active affectations."""
     today = date.today().strftime('%Y-%m-%d')
     cursor.execute("""
                    SELECT COUNT(*)
@@ -389,15 +397,12 @@ def dashboard():
         conn = get_db_connection()
         cursor = conn.cursor()
 
-        # Total employees
         cursor.execute("SELECT COUNT(*) FROM Employe")
         total_employes = cursor.fetchone()[0]
 
-        # Total articles
         cursor.execute("SELECT COUNT(*) FROM Article")
         total_articles = cursor.fetchone()[0]
 
-        # Affected articles
         cursor.execute("""
             SELECT COUNT(DISTINCT af.ID_Article_Affectation)
             FROM Affectation af
@@ -405,7 +410,6 @@ def dashboard():
         """)
         articles_affectes = cursor.fetchone()[0]
 
-        # Non-affected articles
         cursor.execute("""
             SELECT COUNT(*) 
             FROM Article ar
@@ -415,7 +419,6 @@ def dashboard():
         """)
         articles_non_affectes = cursor.fetchone()[0]
 
-        # Articles by type
         cursor.execute("""
             SELECT Type_Article, COUNT(*) 
             FROM Article 
@@ -423,7 +426,6 @@ def dashboard():
         """)
         repartition_types = cursor.fetchall()
 
-        # Articles by service
         cursor.execute("""
             SELECT COALESCE(af.Service_Employe_Article, 'N/A'), COUNT(*) 
             FROM Article ar
@@ -433,7 +435,6 @@ def dashboard():
         """)
         repartition_services = cursor.fetchall()
 
-        # Employees by direction and service
         cursor.execute("""
             SELECT COALESCE(Direction_Employe, 'N/A') AS Direction_Employe, 
                    COALESCE(Service_Employe, 'N/A') AS Service_Employe, 
@@ -443,7 +444,6 @@ def dashboard():
         """)
         repartition_employes = cursor.fetchall()
 
-        # Materials by direction and service
         cursor.execute("""
             -- Directions
             SELECT 
@@ -473,7 +473,6 @@ def dashboard():
         """)
         repartition_materiel_direction_service = cursor.fetchall()
 
-        # Log data for debugging
         logger.debug(f"Total employés: {total_employes}")
         logger.debug(f"Total articles: {total_articles}")
         logger.debug(f"Articles affectés: {articles_affectes}")
@@ -761,7 +760,6 @@ def editer_utilisateur(id):
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
-
         cursor.execute("SELECT * FROM Employe WHERE ID_Employe = ?", (id,))
         employe = cursor.fetchone()
         if not employe:
@@ -873,270 +871,173 @@ def supprimer_utilisateur(id):
 
 
 
-@app.route('/materiel')
-@login_required
-def materiel():
-    logger.debug("Accessed materiel route")
+
+@app.route('/generer_code_barre/<id_article>')
+def generer_code_barre(id_article):
     try:
-        conn = get_db_connection()
-        cursor = conn.cursor()
+        if not id_article.isdigit():
+            return "ID article invalide", 400
 
-        # Fetch articles with affectation details
-        cursor.execute("""
-                       SELECT a.ID_Article,
-                              a.Ref_Article,
-                              a.Libelle_Article,
-                              a.Type_Article,
-                              a.Marque_Article,
-                              a.Etat_Article,
-                              a.Statut_Article,
-                              a.Affecter_au_Article,
-                              a.Image_Path,
-                              af.Service_Employe_Article,
-                              e.Nom_Employe,
-                              e.Prenom_Employe
-                       FROM Article a
-                                LEFT JOIN Affectation af ON a.ID_Article = af.ID_Article_Affectation
-                           AND (af.Date_Restitution_Affectation IS NULL OR af.Date_Restitution_Affectation > ?)
-                                LEFT JOIN Employe e ON a.Affecter_au_Article = e.Code_Employe
-                       """, (date.today().strftime('%Y-%m-%d'),))
-        articles = cursor.fetchall()
-        article_columns = [column[0] for column in cursor.description]
-        articles_list = []
-        today = date.today().strftime('%Y-%m-%d')
-        for article in articles:
-            article_dict = dict(zip(article_columns, article))
-            # Determine affectation display
-            if article.Affecter_au_Article and article.Nom_Employe:
-                article_dict['Affectation_Display'] = f"{article.Nom_Employe} {article.Prenom_Employe} (Employé)"
-            elif article.Service_Employe_Article:
-                # Check if Service_Employe_Article is a direction
-                cursor.execute("SELECT COUNT(*) FROM Employe WHERE Direction_Employe = ?",
-                               (article.Service_Employe_Article,))
-                is_direction = cursor.fetchone()[0] > 0
-                article_dict['Affectation_Display'] = (f"{article.Service_Employe_Article} "
-                                                       f"({'Direction' if is_direction else 'Service'})")
-            else:
-                article_dict['Affectation_Display'] = "Non affecté"
-            articles_list.append(article_dict)
+        barcode = Code128(id_article, writer=ImageWriter())
+        barcode_path = os.path.join(app.config['BARCODE_FOLDER'], f"{id_article}")
+        barcode.save(barcode_path, options={'write_text': False})
 
-        # Fetch employees for filters and details
-        cursor.execute("SELECT Code_Employe, Nom_Employe, Prenom_Employe FROM Employe")
-        employes = cursor.fetchall()
-        employe_columns = [column[0] for column in cursor.description]
-        employes_list = [dict(zip(employe_columns, employe)) for employe in employes]
-
-        # Fetch types, states, brands, and statuses
-        cursor.execute("""
-                       SELECT DISTINCT Type_Article
-                       FROM Article
-                       WHERE Type_Article IS NOT NULL
-                         AND Type_Article <> ''
-                       ORDER BY Type_Article
-                       """)
-        types = [row.Type_Article for row in cursor.fetchall()]
-
-        cursor.execute("""
-                       SELECT DISTINCT Etat_Article
-                       FROM Article
-                       WHERE Etat_Article IS NOT NULL
-                         AND Etat_Article <> ''
-                       ORDER BY Etat_Article
-                       """)
-        etats = [row.Etat_Article for row in cursor.fetchall()]
-
-        cursor.execute("""
-                       SELECT DISTINCT Marque_Article
-                       FROM Article
-                       WHERE Marque_Article IS NOT NULL
-                         AND Marque_Article <> ''
-                       ORDER BY Marque_Article
-                       """)
-        marques = [row.Marque_Article for row in cursor.fetchall()]
-
-        cursor.execute("""
-                       SELECT DISTINCT Statut_Article
-                       FROM Article
-                       WHERE Statut_Article IS NOT NULL
-                         AND Statut_Article <> ''
-                       ORDER BY Statut_Article
-                       """)
-        statuts = [row.Statut_Article for row in cursor.fetchall()]
-
-        # Fetch services and directions for filter dropdown
-        cursor.execute("""
-                       SELECT DISTINCT Service_Employe
-                       FROM Employe
-                       WHERE Service_Employe IS NOT NULL
-                         AND Service_Employe <> ''
-                       ORDER BY Service_Employe
-                       """)
-        services = [row.Service_Employe for row in cursor.fetchall()]
-
-        cursor.execute("""
-                       SELECT DISTINCT Direction_Employe
-                       FROM Employe
-                       WHERE Direction_Employe IS NOT NULL
-                         AND Direction_Employe <> ''
-                       ORDER BY Direction_Employe
-                       """)
-        directions = [row.Direction_Employe for row in cursor.fetchall()]
-
-        conn.close()
-        return render_template('materiel.html',
-                               articles=articles_list,
-                               employes=employes_list,
-                               employes_liste=employes_list,
-                               types=types,
-                               etats=etats,
-                               marques=marques,
-                               statuts=statuts,
-                               services=services,
-                               directions=directions)
-    except pyodbc.Error as e:
-        logger.error(f"Database error in materiel: {str(e)}")
-        flash(f'Erreur de base de données : {str(e)}', 'danger')
-        return render_template('materiel.html',
-                               articles=[],
-                               employes=[],
-                               employes_liste=[],
-                               types=[],
-                               etats=[],
-                               marques=[],
-                               statuts=[],
-                               services=[],
-                               directions=[])
+        return send_file(f"{barcode_path}.png", mimetype='image/png')
     except Exception as e:
-        logger.error(f"Error in materiel: {str(e)}")
-        flash(f'Erreur : {str(e)}', 'danger')
-        return render_template('materiel.html',
-                               articles=[],
-                               employes=[],
-                               employes_liste=[],
-                               types=[],
-                               etats=[],
-                               marques=[],
-                               statuts=[],
-                               services=[],
-                               directions=[])
+        logger.error(f"Error generating barcode for {id_article}: {str(e)}")
+        return "Erreur lors de la génération du code-barres", 500
+@app.route('/imprimer_code_barre/<id_article>')
+def imprimer_code_barre(id_article):
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT ID_Article, Libelle_Article FROM Article WHERE ID_Article = ?", (id_article,))
+    article = cursor.fetchone()
+    conn.close()
+
+    if not article:
+        flash('Matériel non trouvé.', 'danger')
+        return redirect(url_for('materiel'))
+
+    return render_template('print_barcode.html', article=article)
 
 @app.route('/ajouter_materiel', methods=['GET', 'POST'])
 @login_required
 def ajouter_materiel():
-    logger.debug(f"Accessed ajouter_materiel route, method: {request.method}")
+    if request.method == 'POST':
+        ref = request.form.get('ref')
+        libelle = request.form.get('libelle')
+        type_article = request.form.get('type')
+        marque = request.form.get('marque')
+        etat = request.form.get('etat')
+        date_achat = request.form.get('date_achat') or None
+        affecter_au = request.form.get('affecter_au') or None
+        image = request.files.get('image')
+
+        conn = get_db_connection()
+        cursor = conn.cursor()
+
+        try:
+            # Insert into Article
+            cursor.execute("""
+                INSERT INTO Article (
+                    Ref_Article, Libelle_Article, Type_Article, Marque_Article, Etat_Article, 
+                    Statut_Article, Date_Achat_Article, Image_Path, Categorie_Article, 
+                    Description_Article, Location_Article, Affecter_au_Article, 
+                    Service_Employe_Article, Agence_Article, Date_Restitution_Article, 
+                    Compte_Comptable_Article, modifier_o, Achete_Par_Article, 
+                    Affecte_A_Article, Numero_Affectation, Date_Echeance_Article, 
+                    Date_Affectation_Article
+                )
+                OUTPUT INSERTED.ID_Article
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                ref, libelle, type_article, marque, etat, 'NON AFFECTE', date_achat, None,
+                None, None, None, affecter_au or None, None, None, None, None, None,
+                None, None, None, None, None
+            ))
+
+            id_article = cursor.fetchone()[0]
+
+            image_path = None
+            if image and image.filename and allowed_file(image.filename):
+                filename = secure_filename(f"{id_article}_{image.filename}")
+                image.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
+                image_path = filename
+                cursor.execute("UPDATE Article SET Image_Path = ? WHERE ID_Article = ?", (image_path, id_article))
+
+            if affecter_au:
+                cursor.execute("SELECT ID_Employe, Service_Employe FROM Employe WHERE Code_Employe = ?", (affecter_au,))
+                employee = cursor.fetchone()
+                if not employee:
+                    raise ValueError(f"Employé avec Code_Employe {affecter_au} non trouvé.")
+                id_employe, service_employe = employee
+                numero_affectation = f"AUTO_{get_server_timestamp().strftime('%Y%m%d%H%M%S')}"
+                cursor.execute("""
+                    INSERT INTO Affectation (
+                        ID_Article_Affectation, ID_Employe, Date_Affectation, 
+                        Affecter_au_Article, Service_Employe_Article, Numero_Affectation
+                    )
+                    VALUES (?, ?, GETDATE(), ?, ?, ?)
+                """, (id_article, id_employe, affecter_au, service_employe or 'Inconnu', numero_affectation))
+
+            update_article_status(id_article, conn, cursor)
+
+            conn.commit()
+            flash('Matériel ajouté avec succès.', 'success')
+            logger.info(f"Added material ID: {id_article}, affecter_au: {affecter_au}")
+            return redirect(url_for('materiel', new_id=id_article))
+        except pyodbc.Error as e:
+            conn.rollback()
+            logger.error(f"Database error in ajouter_materiel: {str(e)}")
+            flash(f'Erreur de base de données : {str(e)}', 'danger')
+        except ValueError as e:
+            conn.rollback()
+            logger.error(f"Validation error in ajouter_materiel: {str(e)}")
+            flash(f'Erreur : {str(e)}', 'danger')
+        finally:
+            conn.close()
+
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    cursor.execute("SELECT DISTINCT Type_Article FROM Article WHERE Type_Article IS NOT NULL")
+    types = [row[0] for row in cursor.fetchall()]
+    cursor.execute("SELECT DISTINCT Etat_Article FROM Article WHERE Etat_Article IS NOT NULL")
+    etats = [row[0] for row in cursor.fetchall()]
+    cursor.execute("SELECT Code_Employe, Nom_Employe, Prenom_Employe FROM Employe WHERE Statut_Employe = 'Actif'")
+    employes = cursor.fetchall()
+    conn.close()
+
+    return render_template('ajouter_materiel.html', types=types, etats=etats, employes=employes)
+
+@app.route('/materiel')
+@login_required
+def materiel():
     try:
         conn = get_db_connection()
         cursor = conn.cursor()
-        types = ['ordinateur', 'imprimante', 'scanner', 'autre']
-        etats = ['dispo', 'en maintenance', 'non disponible']
-        categories = ['électronique', 'mobilier', 'autre']
-        locations = ['bureau 1', 'bureau 2', 'entrepôt']
-        cursor.execute("SELECT Code_Employe, Nom_Employe, Prenom_Employe FROM Employe")
-        employes = cursor.fetchall()
 
-        if request.method == 'POST':
-            ref = request.form['ref']
-            libelle = request.form['libelle']
-            type_article = request.form['type']
-            marque = request.form['marque']
-            etat = request.form['etat']
-            date_achat = request.form.get('date_achat') or None
-            affecte_a_id = request.form.get('affecter_au') or None
+        cursor.execute("""
+            SELECT a.ID_Article, a.Ref_Article, a.Libelle_Article, a.Type_Article, a.Marque_Article, 
+                   a.Etat_Article, a.Statut_Article, a.Image_Path,
+                   COALESCE(e.Nom_Employe + ' ' + e.Prenom_Employe, 'Non affecté') AS Affectation_Display
+            FROM Article a
+            LEFT JOIN Affectation aff ON a.ID_Article = aff.ID_Article_Affectation
+            LEFT JOIN Employe e ON aff.Affecter_au_Article = e.Code_Employe
+            WHERE aff.Date_Restitution_Affectation IS NULL OR aff.Date_Restitution_Affectation > GETDATE()
+        """)
+        articles = cursor.fetchall()
 
-            image_path_db = None
-            if 'image' in request.files:
-                image = request.files['image']
-                if image and allowed_file(image.filename):
-                    filename = secure_filename(f"{uuid.uuid4().hex}_{image.filename}")
-                    image_path_db = filename
-                    image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-                    logger.debug(f"Saving image to: {image_path}, DB path: {image_path_db}")
-                    if len(image_path_db) > 255:
-                        flash('Nom du fichier image trop long.', 'danger')
-                        return redirect(request.url)
-                    image.save(image_path)
-                    if not os.path.exists(image_path):
-                        logger.error(f"Image not saved: {image_path}")
-                        flash('Erreur : Image non enregistrée.', 'danger')
-                        return redirect(request.url)
-                    logger.info(f"Image saved successfully: {image_path_db}")
-                elif image.filename != '':
-                    flash('Format d\'image non valide. Utilisez PNG, JPG ou JPEG.', 'danger')
-                    return redirect(request.url)
+        cursor.execute("SELECT DISTINCT Type_Article FROM Article WHERE Type_Article IS NOT NULL")
+        types = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT DISTINCT Etat_Article FROM Article WHERE Etat_Article IS NOT NULL")
+        etats = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT DISTINCT Marque_Article FROM Article WHERE Marque_Article IS NOT NULL")
+        marques = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT DISTINCT Statut_Article FROM Article WHERE Statut_Article IS NOT NULL")
+        statuts = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT Nom_Employe, Prenom_Employe FROM Employe WHERE Statut_Employe = 'Actif'")
+        employes_liste = cursor.fetchall()
+        cursor.execute("SELECT DISTINCT Service_Employe_Article FROM Article WHERE Service_Employe_Article IS NOT NULL")
+        services = [row[0] for row in cursor.fetchall()]
+        cursor.execute("SELECT DISTINCT Agence_Article FROM Article WHERE Agence_Article IS NOT NULL")
+        directions = [row[0] for row in cursor.fetchall()]
 
-            cursor.execute("""
-                           INSERT INTO Article (Ref_Article,
-                                                Libelle_Article,
-                                                Type_Article,
-                                                Marque_Article,
-                                                Etat_Article,
-                                                Statut_Article,
-                                                Affecter_au_Article,
-                                                Image_Path,
-                                                Date_Achat_Article)
-                           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-                           """, (
-                               ref,
-                               libelle,
-                               type_article,
-                               marque,
-                               etat,
-                               'NON AFFECTE',  # Initial status, updated by affectation if needed
-                               None,  # Affecter_au_Article set via affectation
-                               image_path_db,
-                               date_achat
-                           ))
-            article_id = cursor.execute("SELECT @@IDENTITY").fetchone()[0]
-
-            if affecte_a_id:
-                server_time = get_server_timestamp()
-                numero_affectation = f"AUTO_{server_time.strftime('%Y%m%d%H%M%S')}"
-                cursor.execute("""
-                               INSERT INTO Affectation (ID_Article_Affectation,
-                                                        Service_Employe_Article,
-                                                        Date_Affectation,
-                                                        Affecter_au_Article,
-                                                        Numero_Affectation)
-                               VALUES (?, ?, ?, ?, ?)
-                               """, (
-                                   article_id,
-                                   cursor.execute("SELECT Service_Employe FROM Employe WHERE Code_Employe = ?",
-                                                  (affecte_a_id,)).fetchone()[0] or "Inconnu",
-                                   date.today().strftime('%Y-%m-%d'),
-                                   affecte_a_id,
-                                   numero_affectation
-                               ))
-                update_article_status(article_id, conn, cursor)
-
-            conn.commit()
-            flash('Matériel ajouté avec succès', 'success')
-            logger.info(f"Added material: {ref}, Image_Path: {image_path_db}, Date_Achat: {date_achat}")
-            conn.close()
-            return redirect(url_for('materiel'))
+        new_article = None
+        new_id = request.args.get('new_id')
+        if new_id:
+            cursor.execute("SELECT ID_Article, Libelle_Article FROM Article WHERE ID_Article = ?", (new_id,))
+            new_article = cursor.fetchone()
 
         conn.close()
-        return render_template('ajouter_materiel.html',
-                               types=types,
-                               etats=etats,
-                               categories=categories,
-                               locations=locations,
-                               employes=employes)
-    except pyodbc.DataError as e:
-        conn.rollback()
-        logger.error(f"Data error in ajouter_materiel: {str(e)}")
-        flash(f'Erreur de base de données : {str(e)}', 'danger')
-        return redirect(request.url)
-    except pyodbc.Error as e:
-        conn.rollback()
-        logger.error(f"Database error in ajouter_materiel: {str(e)}")
-        flash(f'Erreur de base de données : {str(e)}', 'danger')
-        return redirect(request.url)
-    except KeyError as e:
-        conn.rollback()
-        logger.error(f"Form field missing in ajouter_materiel: {str(e)}")
-        flash(f'Erreur : Champ de formulaire manquant ({str(e)}).', 'danger')
-        return redirect(request.url)
 
+        return render_template('materiel.html', articles=articles, types=types, etats=etats, marques=marques,
+                               statuts=statuts, employes_liste=employes_liste, services=services, directions=directions,
+                               new_article=new_article)
+    except pyodbc.Error as e:
+        logger.error(f"Database error in materiel: {str(e)}")
+        flash(f'Erreur de base de données : {str(e)}', 'danger')
+        return render_template('materiel.html', articles=[], types=[], etats=[], marques=[],
+                               statuts=[], employes_liste=[], services=[], directions=[], new_article=None)
 
 @app.route('/editer_materiel/<int:id>', methods=['GET', 'POST'])
 @login_required
@@ -1160,7 +1061,7 @@ def editer_materiel(id):
             logger.warning(f"Material not found: ID {id}")
             return redirect(url_for('materiel'))
 
-        cursor.execute("SELECT Code_Employe, Nom_Employe, Prenom_Employe FROM Employe")
+        cursor.execute("SELECT Code_Employe, Nom_Employe, Prenom_Employe FROM Employe WHERE Statut_Employe = 'Actif'")
         employes = cursor.fetchall()
 
         if request.method == 'POST':
@@ -1169,7 +1070,7 @@ def editer_materiel(id):
             type_article = request.form['type']
             marque = request.form['marque']
             etat = request.form['etat']
-            affecte_a_id = request.form.get('affecte_a') or None
+            affecte_a_code = request.form.get('affecte_a') or None  # Code_Employe
 
             image_path_db = article_dict.get('Image_Path')
             remove_image = 'remove_image' in request.form
@@ -1182,82 +1083,61 @@ def editer_materiel(id):
                     filename = secure_filename(f"{uuid.uuid4().hex}_{image.filename}")
                     image_path_db = filename
                     image_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-                    logger.debug(f"Saving image to: {image_path}, DB path: {image_path_db}")
-                    if len(image_path_db) > 255:
-                        flash('Nom du fichier image trop long.', 'danger')
-                        return redirect(request.url)
                     image.save(image_path)
-                    if not os.path.exists(image_path):
-                        logger.error(f"Image not saved: {image_path}")
-                        flash('Erreur : Image non enregistrée.', 'danger')
-                        return redirect(request.url)
                     logger.info(f"Image updated for article ID: {id}, Image_Path: {image_path_db}")
                 elif image.filename != '':
                     flash('Format d\'image non valide. Utilisez PNG, JPG ou JPEG.', 'danger')
                     return redirect(request.url)
 
             cursor.execute("""
-                           UPDATE Article
-                           SET Ref_Article         = ?,
-                               Libelle_Article     = ?,
-                               Type_Article        = ?,
-                               Marque_Article      = ?,
-                               Etat_Article        = ?,
-                               Affecter_au_Article = ?,
-                               Image_Path          = ?
-                           WHERE ID_Article = ?
-                           """, (ref, libelle, type_article, marque, etat, affecte_a_id, image_path_db, id))
+                UPDATE Article
+                SET Ref_Article = ?, Libelle_Article = ?, Type_Article = ?, Marque_Article = ?,
+                    Etat_Article = ?, Affecter_au_Article = ?, Image_Path = ?
+                WHERE ID_Article = ?
+            """, (ref, libelle, type_article, marque, etat, affecte_a_code, image_path_db, id))
 
-            if affecte_a_id and article_dict.get('Affecter_au_Article') != affecte_a_id:
+            if affecte_a_code and article_dict.get('Affecter_au_Article') != affecte_a_code:
+                cursor.execute("SELECT ID_Employe, Service_Employe FROM Employe WHERE Code_Employe = ?", (affecte_a_code,))
+                employee = cursor.fetchone()
+                if not employee:
+                    raise ValueError(f"Employé avec Code_Employe {affecte_a_code} non trouvé.")
+                id_employe, service_employe = employee
+
                 cursor.execute(
                     "DELETE FROM Affectation WHERE ID_Article_Affectation = ? AND Date_Restitution_Affectation IS NULL",
                     (id,))
-                server_time = get_server_timestamp()
-                numero_affectation = f"AUTO_{server_time.strftime('%Y%m%d%H%M%S')}"
+                numero_affectation = f"AUTO_{get_server_timestamp().strftime('%Y%m%d%H%M%S')}"
                 cursor.execute("""
-                               INSERT INTO Affectation (ID_Article_Affectation,
-                                                        Service_Employe_Article,
-                                                        Date_Affectation,
-                                                        Affecter_au_Article,
-                                                        Numero_Affectation)
-                               VALUES (?, ?, ?, ?, ?)
-                               """, (
-                                   id,
-                                   cursor.execute("SELECT Service_Employe FROM Employe WHERE Code_Employe = ?",
-                                                  (affecte_a_id,)).fetchone()[0] or "Inconnu",
-                                   date.today().strftime('%Y-%m-%d'),
-                                   affecte_a_id,
-                                   numero_affectation
-                               ))
-            elif not affecte_a_id and article_dict.get('Affecter_au_Article'):
+                    INSERT INTO Affectation (
+                        ID_Article_Affectation, ID_Employe, Date_Affectation, 
+                        Affecter_au_Article, Service_Employe_Article, Numero_Affectation
+                    )
+                    VALUES (?, ?, ?, ?, ?, ?)
+                """, (id, id_employe, date.today().strftime('%Y-%m-%d'), affecte_a_code, service_employe or 'Inconnu', numero_affectation))
+            elif not affecte_a_code and article_dict.get('Affecter_au_Article'):
                 cursor.execute(
                     "UPDATE Affectation SET Date_Restitution_Affectation = ? WHERE ID_Article_Affectation = ? AND Date_Restitution_Affectation IS NULL",
                     (date.today().strftime('%Y-%m-%d'), id))
 
             update_article_status(id, conn, cursor)
+
             conn.commit()
             flash('Matériel mis à jour', 'success')
-            logger.info(f"Updated material ID: {id}, Image_Path: {image_path_db}")
-            conn.close()
+            logger.info(f"Updated material ID: {id}, affecte_a: {affecte_a_code}")
             return redirect(url_for('materiel'))
 
         conn.close()
         return render_template('edit_materiel.html', article=article_dict, types=types,
                                etats=etats, categories=categories, locations=locations, employes=employes)
-    except pyodbc.DataError as e:
-        conn.rollback()
-        logger.error(f"Data error in editer_materiel: {str(e)}")
-        flash(f'Erreur de base de données : {str(e)}', 'danger')
-        return redirect(request.url)
     except pyodbc.Error as e:
         conn.rollback()
         logger.error(f"Database error in editer_materiel: {str(e)}")
         flash(f'Erreur de base de données : {str(e)}', 'danger')
         return redirect(request.url)
-    except KeyError as e:
+    except ValueError as e:
         conn.rollback()
-        logger.error(f"Form field missing in editer_materiel: {str(e)}")
-        flash(f'Erreur : Champ de formulaire manquant ({str(e)}).', 'danger')
+        logger.error(f"Validation error in editer_materiel: {str(e)}")
+        flash(f'Erreur : {str(e)}', 'danger')
         return redirect(request.url)
 
 

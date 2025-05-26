@@ -48,20 +48,20 @@
                 <div class="col-md-4 mb-3">
                     <label for="service" class="form-label">Service</label>
                     <select class="form-select" id="service" name="service" data-original="{{ employe.Service_Employe | default('') }}">
-                        <option value="" {% if not employe.Service_Employe %}selected{% endif %}>Sélectionner un service</option>
-                        {% for service in services %}
-                            <option value="{{ service.Service_Service }}" {% if employe.Service_Employe == service.Service_Service %}selected{% endif %}>{{ service.Service_Service }}</option>
-                        {% endfor %}
-                    </select>
+    <option value="" {% if not employe.Service_Employe %}selected{% endif %}>Sélectionner un service</option>
+    {% for service in services %}
+        <option value="{{ service }}" {% if employe.Service_Employe == service %}selected{% endif %}>{{ service }}</option>
+    {% endfor %}
+</select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="direction" class="form-label">Direction</label>
                     <select class="form-select" id="direction" name="direction" data-original="{{ employe.Direction_Employe | default('') }}">
-                        <option value="" {% if not employe.Direction_Employe %}selected{% endif %}>Sélectionner une direction</option>
-                        {% for direction in directions %}
-                            <option value="{{ direction.Direction_Direction }}" {% if employe.Direction_Employe == direction.Direction_Direction %}selected{% endif %}>{{ direction.Direction_Direction }}</option>
-                        {% endfor %}
-                    </select>
+    <option value="" {% if not employe.Direction_Employe %}selected{% endif %}>Sélectionner une direction</option>
+    {% for direction in directions %}
+        <option value="{{ direction }}" {% if employe.Direction_Employe == direction %}selected{% endif %}>{{ direction }}</option>
+    {% endfor %}
+</select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="affectation" class="form-label">Affectation</label>

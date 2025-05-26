@@ -172,6 +172,16 @@
                                                         <p><strong>Affecté à:</strong> {{ article.Affectation_Display }}</p>
                                                     </div>
                                                 </div>
+                                                <div class="mt-3">
+                                                    <h6>Code-barres:</h6>
+                                                    <div class="text-center">
+                                                        <img src="{{ url_for('generer_code_barre', id_article=article.ID_Article) }}"
+                                                             alt="Code-barres {{ article.ID_Article }}"
+                                                             class="img-fluid"
+                                                             style="max-width: 200px;">
+                                                        <p class="mt-2">{{ article.ID_Article }}</p>
+                                                    </div>
+                                                </div>
                                                 {% if article.Image_Path and article.Image_Path|length > 0 %}
                                                     <div class="text-center mt-3">
                                                         <img src="{{ url_for('static', filename='images/' + article.Image_Path) }}"
@@ -184,6 +194,7 @@
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                                                 <a href="{{ url_for('editer_materiel', id=article.ID_Article) }}" class="btn btn-primary">Modifier</a>
+                                                <a href="{{ url_for('imprimer_code_barre', id_article=article.ID_Article) }}" class="btn btn-success">Imprimer Code-barres</a>
                                             </div>
                                         </div>
                                     </div>
@@ -232,13 +243,42 @@
                 </ul>
             </nav>
         </div>
+
+        <!-- Barcode Modal for New Material -->
+        <div class="modal fade" id="barcodeModal" tabindex="-1" aria-labelledby="barcodeModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="barcodeModalLabel">Code-barres du Nouveau Matériel</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        {% if new_article %}
+                            <p><strong>{{ new_article.Libelle_Article }}</strong> ({{ new_article.ID_Article }})</p>
+                            <img src="{{ url_for('generer_code_barre', id_article=new_article.ID_Article) }}"
+                                 alt="Code-barres {{ new_article.ID_Article }}"
+                                 class="img-fluid"
+                                 style="max-width: 200px;">
+                        {% else %}
+                            <p>Aucun matériel sélectionné.</p>
+                        {% endif %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        {% if new_article %}
+                            <a href="{{ url_for('imprimer_code_barre', id_article=new_article.ID_Article) }}" class="btn btn-primary">Imprimer</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- JavaScript for Search and Sort -->
+<!-- JavaScript for Search, Sort, and Modal Trigger -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Variables
+    // Search and Filter Variables
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const filterType = document.getElementById('filterType');
@@ -267,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const statut = row.cells[5].textContent.trim().toLowerCase();
             const affecte = row.cells[6].textContent.trim().toLowerCase();
 
-            // Check if non-affected filter is selected
             const isNonAffecteSelected = affectationFilter === 'non-affecte';
             const isRowNonAffecte = affecte.includes('non affecté');
 
@@ -315,7 +354,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const sortColumn = this.getAttribute('data-sort');
             let sortDirection = 'asc';
 
-            // Toggle sort direction if same column is clicked
             if (currentSort.column === sortColumn) {
                 sortDirection = currentSort.direction === 'asc' ? 'desc' : 'asc';
             }
@@ -325,7 +363,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 direction: sortDirection
             };
 
-            // Get column index
             let columnIndex;
             switch(sortColumn) {
                 case 'reference': columnIndex = 0; break;
@@ -338,7 +375,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 default: columnIndex = 0;
             }
 
-            // Sort the table
             const rowsArray = Array.from(tableRows);
             const sortedRows = rowsArray.sort((a, b) => {
                 const aValue = a.cells[columnIndex].textContent.trim();
@@ -351,13 +387,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
 
-            // Update table with sorted rows
             const tbody = document.querySelector('#materielTable tbody');
             sortedRows.forEach(row => {
                 tbody.appendChild(row);
             });
 
-            // Update sort icons
             sortableHeaders.forEach(h => {
                 h.querySelector('i').className = 'bi bi-arrow-down-up';
             });
@@ -366,6 +400,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 'bi bi-arrow-up' : 'bi bi-arrow-down';
         });
     });
+
+    // Trigger Barcode Modal if new_id is present
+    const urlParams = new URLSearchParams(window.location.search);
+    const newId = urlParams.get('new_id');
+    if (newId) {
+        const barcodeModal = new bootstrap.Modal(document.getElementById('barcodeModal'));
+        barcodeModal.show();
+    }
 
     // Make table images clickable to show in modal
     document.querySelectorAll('#materielTable img').forEach(img => {

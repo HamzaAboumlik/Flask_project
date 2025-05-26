@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Imprimer Code-barres{% endblock %}
+
+{% block content %}
+<style>
+    @media print {
+        .no-print, .btn, .card-header, .modal-footer {
+            display: none !important;
+        }
+        .barcode-container {
+            text-align: center;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .barcode-container img {
+            max-width: 100%;
+        }
+    }
+    .barcode-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+</style>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+        <h3><i class="bi bi-upc"></i> Imprimer Code-barres</h3>
+        <a href="{{ url_for('materiel') }}" class="btn btn-light no-print">Retour</a>
+    </div>
+    <div class="card-body">
+        {% if article %}
+            <div class="barcode-container">
+                <h5>{{ article.Libelle_Article }} ({{ article.ID_Article }})</h5>
+                <img src="{{ url_for('generer_code_barre', id_article=article.ID_Article) }}"
+                     alt="Code-barres {{ article.ID_Article }}"
+                     class="img-fluid"
+                     style="max-width: 200px;">
+                <p class="mt-2">{{ article.ID_Article }}</p>
+            </div>
+            <div class="text-center mt-3 no-print">
+                <button class="btn btn-primary" onclick="window.print()">
+                    <i class="bi bi-printer"></i> Imprimer
+                </button>
+            </div>
+        {% else %}
+            <p class="text-center">Aucun matériel trouvé.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -48,18 +48,18 @@
                 <div class="col-md-4 mb-3">
                     <label for="service" class="form-label">Service</label>
                     <select class="form-select" id="service" name="service">
-                        <option value="" selected>Sélectionner un service</option>
+                        <option value="">Sélectionner un service</option>
                         {% for service in services %}
-                            <option value="{{ service.Service_Service }}">{{ service.Service_Service }}</option>
+                            <option value="{{ service }}">{{ service }}</option>
                         {% endfor %}
                     </select>
                 </div>
                 <div class="col-md-4 mb-3">
                     <label for="direction" class="form-label">Direction</label>
                     <select class="form-select" id="direction" name="direction">
-                        <option value="" selected>Sélectionner une direction</option>
+                        <option value="">Sélectionner une direction</option>
                         {% for direction in directions %}
-                            <option value="{{ direction.Direction_Direction }}">{{ direction.Direction_Direction }}</option>
+                            <option value="{{ direction }}">{{ direction }}</option>
                         {% endfor %}
                     </select>
                 </div>

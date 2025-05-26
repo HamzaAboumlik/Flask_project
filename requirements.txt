@@ -6,3 +6,9 @@ pandas
 openpyxl
 weasyprint
 werkzeug
+python-barcode
+Pillow
+
+python -barcode
+
+Pillo

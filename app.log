@@ -18906,3 +18906,988 @@
 2025-05-22 17:39:40,677 - INFO - 127.0.0.1 - - [22/May/2025 17:39:40] "GET /dashboard HTTP/1.1" 200 -
 2025-05-22 17:39:40,693 - INFO - 127.0.0.1 - - [22/May/2025 17:39:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
 2025-05-22 17:39:40,909 - INFO - 127.0.0.1 - - [22/May/2025 17:39:40] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:04:53,245 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-26 09:04:53,245 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-26 09:04:53,248 - INFO -  * Restarting with stat
+2025-05-26 09:04:55,269 - WARNING -  * Debugger is active!
+2025-05-26 09:04:55,284 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 09:05:09,594 - DEBUG - Accessed index route
+2025-05-26 09:05:09,687 - INFO - 127.0.0.1 - - [26/May/2025 09:05:09] "GET / HTTP/1.1" 200 -
+2025-05-26 09:05:10,153 - INFO - 127.0.0.1 - - [26/May/2025 09:05:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:05:10,157 - INFO - 127.0.0.1 - - [26/May/2025 09:05:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:05:10,266 - INFO - 127.0.0.1 - - [26/May/2025 09:05:10] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-26 09:05:10,493 - DEBUG - Accessed login route, method: GET
+2025-05-26 09:05:10,515 - INFO - 127.0.0.1 - - [26/May/2025 09:05:10] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-26 09:05:10,648 - INFO - 127.0.0.1 - - [26/May/2025 09:05:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-26 09:05:14,829 - INFO - 127.0.0.1 - - [26/May/2025 09:05:14] "[32mGET /affectations HTTP/1.1[0m" 302 -
+2025-05-26 09:05:15,134 - DEBUG - Accessed login route, method: GET
+2025-05-26 09:05:15,136 - INFO - 127.0.0.1 - - [26/May/2025 09:05:15] "GET /login?next=http://localhost:5000/affectations HTTP/1.1" 200 -
+2025-05-26 09:05:15,504 - INFO - 127.0.0.1 - - [26/May/2025 09:05:15] "GET /static/images/background.jpg HTTP/1.1" 200 -
+2025-05-26 09:05:25,239 - DEBUG - Accessed login route, method: POST
+2025-05-26 09:05:26,185 - INFO - User admin@example.com logged in successfully
+2025-05-26 09:05:26,187 - INFO - 127.0.0.1 - - [26/May/2025 09:05:26] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 09:05:26,192 - DEBUG - Accessed index route
+2025-05-26 09:05:26,193 - INFO - 127.0.0.1 - - [26/May/2025 09:05:26] "GET / HTTP/1.1" 200 -
+2025-05-26 09:05:26,524 - INFO - 127.0.0.1 - - [26/May/2025 09:05:26] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:05:26,529 - INFO - 127.0.0.1 - - [26/May/2025 09:05:26] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:05:26,782 - DEBUG - Accessed api_stats route
+2025-05-26 09:05:26,797 - INFO - 127.0.0.1 - - [26/May/2025 09:05:26] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 09:05:33,353 - DEBUG - Accessed admin_users route
+2025-05-26 09:05:33,402 - INFO - 127.0.0.1 - - [26/May/2025 09:05:33] "GET /admin/users HTTP/1.1" 200 -
+2025-05-26 09:05:33,666 - INFO - 127.0.0.1 - - [26/May/2025 09:05:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:05:33,741 - INFO - 127.0.0.1 - - [26/May/2025 09:05:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:05:36,416 - DEBUG - Total employés: 3
+2025-05-26 09:05:36,416 - DEBUG - Total articles: 4
+2025-05-26 09:05:36,416 - DEBUG - Articles affectés: 3
+2025-05-26 09:05:36,416 - DEBUG - Articles non affectés: 1
+2025-05-26 09:05:36,416 - DEBUG - Répartition types: [('autre', 2), ('imprimante', 1), ('ordinateur', 1)]
+2025-05-26 09:05:36,416 - DEBUG - Répartition services: [('Comptabilité', 1), ('IT Department', 1), ('IT Support', 1)]
+2025-05-26 09:05:36,417 - DEBUG - Répartition employés: [('IT Department', 'Comptabilité', 1), ('IT Department', 'IT Support', 2)]
+2025-05-26 09:05:36,417 - DEBUG - Répartition matériel direction/service: [('IT Department', 'N/A', 3), ('N/A', 'Comptabilité', 1), ('N/A', 'IT Support', 2)]
+2025-05-26 09:05:36,536 - INFO - 127.0.0.1 - - [26/May/2025 09:05:36] "GET /dashboard HTTP/1.1" 200 -
+2025-05-26 09:05:36,577 - INFO - 127.0.0.1 - - [26/May/2025 09:05:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:05:36,640 - INFO - 127.0.0.1 - - [26/May/2025 09:05:36] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:05:59,963 - DEBUG - Accessed index route
+2025-05-26 09:05:59,964 - INFO - 127.0.0.1 - - [26/May/2025 09:05:59] "GET / HTTP/1.1" 200 -
+2025-05-26 09:06:00,099 - INFO - 127.0.0.1 - - [26/May/2025 09:06:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:06:00,220 - DEBUG - Accessed api_stats route
+2025-05-26 09:06:00,222 - INFO - 127.0.0.1 - - [26/May/2025 09:06:00] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 09:06:00,315 - INFO - 127.0.0.1 - - [26/May/2025 09:06:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:08:39,279 - DEBUG - Accessed utilisateurs route
+2025-05-26 09:08:39,294 - DEBUG - Total employes fetched: 3
+2025-05-26 09:08:39,295 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 09:08:39,297 - DEBUG - Directions fetched: ['IT Department']
+2025-05-26 09:08:39,333 - INFO - 127.0.0.1 - - [26/May/2025 09:08:39] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 09:08:39,430 - INFO - 127.0.0.1 - - [26/May/2025 09:08:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:08:39,548 - INFO - 127.0.0.1 - - [26/May/2025 09:08:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:08:50,532 - DEBUG - Accessed admin_users route
+2025-05-26 09:08:50,535 - INFO - 127.0.0.1 - - [26/May/2025 09:08:50] "GET /admin/users HTTP/1.1" 200 -
+2025-05-26 09:08:50,845 - INFO - 127.0.0.1 - - [26/May/2025 09:08:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:08:50,862 - INFO - 127.0.0.1 - - [26/May/2025 09:08:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 09:08:54,172 - DEBUG - Accessed index route
+2025-05-26 09:08:54,173 - INFO - 127.0.0.1 - - [26/May/2025 09:08:54] "GET / HTTP/1.1" 200 -
+2025-05-26 09:08:54,311 - INFO - 127.0.0.1 - - [26/May/2025 09:08:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 09:08:54,436 - DEBUG - Accessed api_stats route
+2025-05-26 09:08:54,439 - INFO - 127.0.0.1 - - [26/May/2025 09:08:54] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 09:08:54,515 - INFO - 127.0.0.1 - - [26/May/2025 09:08:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 10:52:15,346 - DEBUG - Accessed profile route, method: GET
+2025-05-26 10:52:15,399 - INFO - 127.0.0.1 - - [26/May/2025 10:52:15] "GET /profile HTTP/1.1" 200 -
+2025-05-26 10:52:15,471 - INFO - 127.0.0.1 - - [26/May/2025 10:52:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 10:52:15,609 - INFO - 127.0.0.1 - - [26/May/2025 10:52:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 10:52:15,735 - INFO - 127.0.0.1 - - [26/May/2025 10:52:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-26 10:52:19,643 - DEBUG - Accessed index route
+2025-05-26 10:52:19,645 - INFO - 127.0.0.1 - - [26/May/2025 10:52:19] "GET / HTTP/1.1" 200 -
+2025-05-26 10:52:19,959 - INFO - 127.0.0.1 - - [26/May/2025 10:52:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 10:52:19,975 - INFO - 127.0.0.1 - - [26/May/2025 10:52:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 10:52:20,312 - DEBUG - Accessed api_stats route
+2025-05-26 10:52:20,335 - INFO - 127.0.0.1 - - [26/May/2025 10:52:20] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:25:37,417 - DEBUG - Accessed index route
+2025-05-26 11:25:37,420 - INFO - 127.0.0.1 - - [26/May/2025 11:25:37] "GET / HTTP/1.1" 200 -
+2025-05-26 11:25:37,458 - INFO - 127.0.0.1 - - [26/May/2025 11:25:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:25:37,682 - DEBUG - Accessed api_stats route
+2025-05-26 11:25:37,726 - INFO - 127.0.0.1 - - [26/May/2025 11:25:37] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:25:37,858 - INFO - 127.0.0.1 - - [26/May/2025 11:25:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,232 - DEBUG - Accessed materiel route
+2025-05-26 11:25:39,321 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:25:39,375 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,484 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,668 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,669 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,674 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:25:39,675 - INFO - 127.0.0.1 - - [26/May/2025 11:25:39] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:25:42,292 - DEBUG - Accessed ajouter_materiel route, method: GET
+2025-05-26 11:25:42,332 - INFO - 127.0.0.1 - - [26/May/2025 11:25:42] "GET /ajouter_materiel HTTP/1.1" 200 -
+2025-05-26 11:25:42,434 - INFO - 127.0.0.1 - - [26/May/2025 11:25:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:25:42,558 - INFO - 127.0.0.1 - - [26/May/2025 11:25:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:28:06,406 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:28:06,588 - INFO -  * Restarting with stat
+2025-05-26 11:33:51,217 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-26 11:33:51,217 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-26 11:33:51,218 - INFO -  * Restarting with stat
+2025-05-26 11:33:52,167 - WARNING -  * Debugger is active!
+2025-05-26 11:33:52,175 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:33:52,361 - INFO - 127.0.0.1 - - [26/May/2025 11:33:52] "[32mGET /ajouter_materiel HTTP/1.1[0m" 302 -
+2025-05-26 11:33:52,366 - DEBUG - Accessed login route, method: GET
+2025-05-26 11:33:52,401 - INFO - 127.0.0.1 - - [26/May/2025 11:33:52] "GET /login HTTP/1.1" 200 -
+2025-05-26 11:33:53,222 - INFO - 127.0.0.1 - - [26/May/2025 11:33:53] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 11:34:40,834 - DEBUG - Accessed login route, method: POST
+2025-05-26 11:34:41,166 - INFO - User admin@example.com logged in successfully
+2025-05-26 11:34:41,167 - INFO - 127.0.0.1 - - [26/May/2025 11:34:41] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 11:34:41,171 - DEBUG - Accessed index route
+2025-05-26 11:34:41,228 - INFO - 127.0.0.1 - - [26/May/2025 11:34:41] "GET / HTTP/1.1" 200 -
+2025-05-26 11:34:41,560 - INFO - 127.0.0.1 - - [26/May/2025 11:34:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:34:41,561 - INFO - 127.0.0.1 - - [26/May/2025 11:34:41] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:34:41,924 - DEBUG - Accessed api_stats route
+2025-05-26 11:34:41,933 - INFO - 127.0.0.1 - - [26/May/2025 11:34:41] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:34:44,681 - INFO - 127.0.0.1 - - [26/May/2025 11:34:44] "[35m[1mGET /materiel HTTP/1.1[0m" 500 -
+2025-05-26 11:34:44,783 - INFO - 127.0.0.1 - - [26/May/2025 11:34:44] "GET /materiel?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-26 11:34:44,919 - INFO - 127.0.0.1 - - [26/May/2025 11:34:44] "GET /materiel?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-26 11:34:45,020 - INFO - 127.0.0.1 - - [26/May/2025 11:34:45] "GET /materiel?__debugger__=yes&cmd=resource&f=console.png&s=Ac7Grmgo4mI0n6tItfop HTTP/1.1" 200 -
+2025-05-26 11:34:45,266 - INFO - 127.0.0.1 - - [26/May/2025 11:34:45] "GET /materiel?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-26 11:35:06,809 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:35:07,527 - INFO -  * Restarting with stat
+2025-05-26 11:35:09,694 - WARNING -  * Debugger is active!
+2025-05-26 11:35:09,699 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:44:31,843 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:44:32,300 - INFO -  * Restarting with stat
+2025-05-26 11:45:26,662 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-26 11:45:26,663 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-26 11:45:26,664 - INFO -  * Restarting with stat
+2025-05-26 11:45:27,941 - WARNING -  * Debugger is active!
+2025-05-26 11:45:27,947 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:45:28,190 - INFO - 127.0.0.1 - - [26/May/2025 11:45:28] "[35m[1mGET /materiel HTTP/1.1[0m" 500 -
+2025-05-26 11:45:28,334 - INFO - 127.0.0.1 - - [26/May/2025 11:45:28] "[36mGET /materiel?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-26 11:45:28,383 - INFO - 127.0.0.1 - - [26/May/2025 11:45:28] "[36mGET /materiel?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-26 11:45:28,740 - INFO - 127.0.0.1 - - [26/May/2025 11:45:28] "GET /materiel?__debugger__=yes&cmd=resource&f=console.png&s=Gi0rhqjC7eJOvGPyw4tL HTTP/1.1" 200 -
+2025-05-26 11:45:29,003 - INFO - 127.0.0.1 - - [26/May/2025 11:45:29] "[36mGET /materiel?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-26 11:47:27,532 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:47:30,113 - INFO -  * Restarting with stat
+2025-05-26 11:47:33,452 - WARNING -  * Debugger is active!
+2025-05-26 11:47:33,457 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:47:35,066 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:47:35,165 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,217 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,391 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,398 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,420 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:47:35,420 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:47:35,421 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:47:35,421 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:47:35,483 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,530 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:47:35,702 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:47:35,702 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:47:35,714 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:47:35,714 - INFO - 127.0.0.1 - - [26/May/2025 11:47:35] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:47:40,476 - INFO - 127.0.0.1 - - [26/May/2025 11:47:40] "[32mGET /ajouter_materiel HTTP/1.1[0m" 302 -
+2025-05-26 11:47:40,617 - DEBUG - Accessed login route, method: GET
+2025-05-26 11:47:40,623 - INFO - 127.0.0.1 - - [26/May/2025 11:47:40] "GET /login HTTP/1.1" 200 -
+2025-05-26 11:47:40,741 - INFO - 127.0.0.1 - - [26/May/2025 11:47:40] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 11:47:52,213 - DEBUG - Accessed login route, method: POST
+2025-05-26 11:47:52,461 - WARNING - Failed login attempt for admin@example.com
+2025-05-26 11:47:52,462 - INFO - 127.0.0.1 - - [26/May/2025 11:47:52] "POST /login HTTP/1.1" 200 -
+2025-05-26 11:47:52,515 - INFO - 127.0.0.1 - - [26/May/2025 11:47:52] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:03,153 - DEBUG - Accessed login route, method: POST
+2025-05-26 11:48:03,416 - INFO - User admin@example.com logged in successfully
+2025-05-26 11:48:03,417 - INFO - 127.0.0.1 - - [26/May/2025 11:48:03] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 11:48:03,420 - DEBUG - Accessed index route
+2025-05-26 11:48:03,424 - INFO - 127.0.0.1 - - [26/May/2025 11:48:03] "GET / HTTP/1.1" 200 -
+2025-05-26 11:48:03,436 - INFO - 127.0.0.1 - - [26/May/2025 11:48:03] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:03,745 - DEBUG - Accessed api_stats route
+2025-05-26 11:48:03,749 - INFO - 127.0.0.1 - - [26/May/2025 11:48:03] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:48:03,790 - INFO - 127.0.0.1 - - [26/May/2025 11:48:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:05,669 - INFO - 127.0.0.1 - - [26/May/2025 11:48:05] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:48:05,735 - INFO - 127.0.0.1 - - [26/May/2025 11:48:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:05,922 - INFO - 127.0.0.1 - - [26/May/2025 11:48:05] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:06,004 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:06,006 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:06,007 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:06,009 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:48:06,009 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:06,052 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:48:06,052 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:06,233 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:06,312 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:48:06,312 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:06,313 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:48:06,313 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:06,946 - INFO - 127.0.0.1 - - [26/May/2025 11:48:06] "GET /ajouter_materiel HTTP/1.1" 200 -
+2025-05-26 11:48:07,042 - INFO - 127.0.0.1 - - [26/May/2025 11:48:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:07,197 - INFO - 127.0.0.1 - - [26/May/2025 11:48:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,141 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:48:10,444 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,477 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,478 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,479 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,488 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,489 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:48:10,489 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:10,759 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:48:10,760 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:10,791 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:10,796 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:48:10,796 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:10,798 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:48:10,799 - INFO - 127.0.0.1 - - [26/May/2025 11:48:10] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:17,064 - INFO - 127.0.0.1 - - [26/May/2025 11:48:17] "GET /ajouter_materiel HTTP/1.1" 200 -
+2025-05-26 11:48:17,171 - INFO - 127.0.0.1 - - [26/May/2025 11:48:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:17,327 - INFO - 127.0.0.1 - - [26/May/2025 11:48:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:54,923 - INFO - 127.0.0.1 - - [26/May/2025 11:48:54] "[32mPOST /ajouter_materiel HTTP/1.1[0m" 302 -
+2025-05-26 11:48:55,220 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "GET /materiel?new_id=20 HTTP/1.1" 200 -
+2025-05-26 11:48:55,544 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,546 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,548 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,556 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,559 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:48:55,559 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:55,560 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:48:55,561 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:55,859 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,862 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:48:55,863 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:48:55,863 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:55,868 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:48:55,868 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:48:55,869 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "GET /static/images/20_pc.jpeg HTTP/1.1" 200 -
+2025-05-26 11:48:55,873 - ERROR - Error generating barcode for 20: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\20.png'
+2025-05-26 11:48:55,873 - INFO - 127.0.0.1 - - [26/May/2025 11:48:55] "[35m[1mGET /generer_code_barre/20 HTTP/1.1[0m" 500 -
+2025-05-26 11:49:02,037 - INFO - 127.0.0.1 - - [26/May/2025 11:49:02] "GET /imprimer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:49:02,154 - INFO - 127.0.0.1 - - [26/May/2025 11:49:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:49:02,294 - INFO - 127.0.0.1 - - [26/May/2025 11:49:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:49:02,373 - ERROR - Error generating barcode for 20: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\20.png'
+2025-05-26 11:49:02,374 - INFO - 127.0.0.1 - - [26/May/2025 11:49:02] "[35m[1mGET /generer_code_barre/20 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:41,920 - INFO - 127.0.0.1 - - [26/May/2025 11:50:41] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:50:41,996 - INFO - 127.0.0.1 - - [26/May/2025 11:50:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,163 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,256 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,257 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,260 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,265 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:50:42,266 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:42,317 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,476 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:50:42,477 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:42,571 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:42,576 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:50:42,577 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:42,579 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:50:42,579 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:42,581 - ERROR - Error generating barcode for 20: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\20.png'
+2025-05-26 11:50:42,582 - INFO - 127.0.0.1 - - [26/May/2025 11:50:42] "[35m[1mGET /generer_code_barre/20 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:49,010 - INFO - 127.0.0.1 - - [26/May/2025 11:50:49] "GET /imprimer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:50:49,115 - INFO - 127.0.0.1 - - [26/May/2025 11:50:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:50:49,251 - INFO - 127.0.0.1 - - [26/May/2025 11:50:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:50:49,331 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:50:49,331 - INFO - 127.0.0.1 - - [26/May/2025 11:50:49] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:51,494 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:50:51,805 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:50:51,815 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:50:51,816 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:51,825 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:51,827 - ERROR - Error generating barcode for 17: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\17.png'
+2025-05-26 11:50:51,828 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[35m[1mGET /generer_code_barre/17 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:51,829 - ERROR - Error generating barcode for 16: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\16.png'
+2025-05-26 11:50:51,830 - INFO - 127.0.0.1 - - [26/May/2025 11:50:51] "[35m[1mGET /generer_code_barre/16 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:52,113 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:52,131 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:50:52,136 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:50:52,139 - ERROR - Error generating barcode for 18: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\18.png'
+2025-05-26 11:50:52,139 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[35m[1mGET /generer_code_barre/18 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:52,139 - ERROR - Error generating barcode for 19: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\19.png'
+2025-05-26 11:50:52,140 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[35m[1mGET /generer_code_barre/19 HTTP/1.1[0m" 500 -
+2025-05-26 11:50:52,146 - ERROR - Error generating barcode for 20: [WinError 2] The system cannot find the file specified: 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\static/barcodes\\20.png'
+2025-05-26 11:50:52,147 - INFO - 127.0.0.1 - - [26/May/2025 11:50:52] "[35m[1mGET /generer_code_barre/20 HTTP/1.1[0m" 500 -
+2025-05-26 11:53:40,883 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:53:45,245 - INFO -  * Restarting with stat
+2025-05-26 11:53:47,149 - WARNING -  * Debugger is active!
+2025-05-26 11:53:47,155 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:53:47,298 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:53:47,398 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:53:47,626 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:53:47,627 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:53:47,771 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:53:47,947 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:53:47,948 - INFO - 127.0.0.1 - - [26/May/2025 11:53:47] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:53:48,082 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:53:48,271 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:53:48,276 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:53:48,393 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:53:48,599 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:53:48,600 - INFO - 127.0.0.1 - - [26/May/2025 11:53:48] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:53:49,687 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:53:51,151 - INFO -  * Restarting with stat
+2025-05-26 11:53:58,472 - WARNING -  * Debugger is active!
+2025-05-26 11:53:58,485 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:53:59,912 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-26 11:53:59,912 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-26 11:53:59,914 - INFO -  * Restarting with stat
+2025-05-26 11:54:00,773 - WARNING -  * Debugger is active!
+2025-05-26 11:54:00,779 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:54:02,633 - INFO - 127.0.0.1 - - [26/May/2025 11:54:02] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:54:02,827 - INFO - 127.0.0.1 - - [26/May/2025 11:54:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:54:02,944 - INFO - 127.0.0.1 - - [26/May/2025 11:54:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:54:02,968 - INFO - 127.0.0.1 - - [26/May/2025 11:54:02] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:54:03,004 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:54:03,004 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:54:03,054 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:54:03,140 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:54:03,270 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:54:03,275 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:54:03,333 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:54:03,334 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:54:03,377 - INFO - 127.0.0.1 - - [26/May/2025 11:54:03] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:54:14,817 - INFO - 127.0.0.1 - - [26/May/2025 11:54:14] "GET /imprimer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:54:14,944 - INFO - 127.0.0.1 - - [26/May/2025 11:54:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:54:15,069 - INFO - 127.0.0.1 - - [26/May/2025 11:54:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:54:15,149 - INFO - 127.0.0.1 - - [26/May/2025 11:54:15] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:54:54,219 - DEBUG - Accessed index route
+2025-05-26 11:54:54,228 - INFO - 127.0.0.1 - - [26/May/2025 11:54:54] "GET / HTTP/1.1" 200 -
+2025-05-26 11:54:54,526 - INFO - 127.0.0.1 - - [26/May/2025 11:54:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:54:54,556 - INFO - 127.0.0.1 - - [26/May/2025 11:54:54] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-26 11:54:54,850 - DEBUG - Accessed login route, method: GET
+2025-05-26 11:54:54,853 - INFO - 127.0.0.1 - - [26/May/2025 11:54:54] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-26 11:54:54,864 - INFO - 127.0.0.1 - - [26/May/2025 11:54:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:54:57,451 - DEBUG - Accessed login route, method: GET
+2025-05-26 11:54:57,452 - INFO - 127.0.0.1 - - [26/May/2025 11:54:57] "GET /login HTTP/1.1" 200 -
+2025-05-26 11:54:57,757 - INFO - 127.0.0.1 - - [26/May/2025 11:54:57] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:07,317 - DEBUG - Accessed login route, method: POST
+2025-05-26 11:55:07,593 - INFO - User admin@example.com logged in successfully
+2025-05-26 11:55:07,593 - INFO - 127.0.0.1 - - [26/May/2025 11:55:07] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 11:55:07,596 - DEBUG - Accessed index route
+2025-05-26 11:55:07,597 - INFO - 127.0.0.1 - - [26/May/2025 11:55:07] "GET / HTTP/1.1" 200 -
+2025-05-26 11:55:07,613 - INFO - 127.0.0.1 - - [26/May/2025 11:55:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:07,918 - DEBUG - Accessed api_stats route
+2025-05-26 11:55:07,922 - INFO - 127.0.0.1 - - [26/May/2025 11:55:07] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:55:07,950 - INFO - 127.0.0.1 - - [26/May/2025 11:55:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,162 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:55:09,240 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,411 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,488 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,489 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,505 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,509 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:55:09,549 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,722 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:55:09,797 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:09,801 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:55:09,813 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:55:09,829 - INFO - 127.0.0.1 - - [26/May/2025 11:55:09] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:55:11,898 - DEBUG - Accessed index route
+2025-05-26 11:55:11,899 - INFO - 127.0.0.1 - - [26/May/2025 11:55:11] "GET / HTTP/1.1" 200 -
+2025-05-26 11:55:12,036 - INFO - 127.0.0.1 - - [26/May/2025 11:55:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:12,158 - DEBUG - Accessed api_stats route
+2025-05-26 11:55:12,160 - INFO - 127.0.0.1 - - [26/May/2025 11:55:12] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 11:55:12,222 - INFO - 127.0.0.1 - - [26/May/2025 11:55:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:13,175 - DEBUG - Accessed liste_inventaire route
+2025-05-26 11:55:13,237 - INFO - 127.0.0.1 - - [26/May/2025 11:55:13] "GET /liste_inventaire HTTP/1.1" 200 -
+2025-05-26 11:55:13,487 - INFO - 127.0.0.1 - - [26/May/2025 11:55:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:13,578 - INFO - 127.0.0.1 - - [26/May/2025 11:55:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:19,673 - INFO - 127.0.0.1 - - [26/May/2025 11:55:19] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:55:19,787 - INFO - 127.0.0.1 - - [26/May/2025 11:55:19] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:19,915 - INFO - 127.0.0.1 - - [26/May/2025 11:55:19] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,009 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,012 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,013 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,019 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:55:20,099 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,227 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:55:20,321 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:55:20,325 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:55:20,327 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:55:20,330 - INFO - 127.0.0.1 - - [26/May/2025 11:55:20] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:55:48,139 - DEBUG - Accessed affectations route
+2025-05-26 11:55:48,202 - INFO - 127.0.0.1 - - [26/May/2025 11:55:48] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 11:55:48,262 - INFO - 127.0.0.1 - - [26/May/2025 11:55:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:55:48,391 - INFO - 127.0.0.1 - - [26/May/2025 11:55:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:16,182 - DEBUG - Accessed supprimer_affectation route for ID: 28
+2025-05-26 11:56:16,198 - INFO - Deleted affectation ID: 28
+2025-05-26 11:56:16,199 - INFO - 127.0.0.1 - - [26/May/2025 11:56:16] "[32mPOST /affectation/supprimer/28 HTTP/1.1[0m" 302 -
+2025-05-26 11:56:16,489 - DEBUG - Accessed affectations route
+2025-05-26 11:56:16,493 - INFO - 127.0.0.1 - - [26/May/2025 11:56:16] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 11:56:16,836 - INFO - 127.0.0.1 - - [26/May/2025 11:56:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:16,836 - INFO - 127.0.0.1 - - [26/May/2025 11:56:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:17,738 - DEBUG - Accessed affectations route
+2025-05-26 11:56:17,741 - INFO - 127.0.0.1 - - [26/May/2025 11:56:17] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 11:56:18,052 - INFO - 127.0.0.1 - - [26/May/2025 11:56:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:18,058 - INFO - 127.0.0.1 - - [26/May/2025 11:56:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:18,855 - INFO - 127.0.0.1 - - [26/May/2025 11:56:18] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:56:18,979 - INFO - 127.0.0.1 - - [26/May/2025 11:56:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,104 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,184 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,185 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,200 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,203 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:56:19,294 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,421 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:56:19,496 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:19,500 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:56:19,513 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:56:19,514 - INFO - 127.0.0.1 - - [26/May/2025 11:56:19] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:56:21,143 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:56:21,159 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,408 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,470 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,487 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,488 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,493 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,495 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:56:21,722 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:56:21,780 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:21,802 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:56:21,803 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:56:21,810 - INFO - 127.0.0.1 - - [26/May/2025 11:56:21] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:56:23,910 - DEBUG - Accessed editer_materiel route for ID: 16, method: GET
+2025-05-26 11:56:23,935 - INFO - 127.0.0.1 - - [26/May/2025 11:56:23] "GET /editer_materiel/16 HTTP/1.1" 200 -
+2025-05-26 11:56:24,018 - INFO - 127.0.0.1 - - [26/May/2025 11:56:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:24,158 - INFO - 127.0.0.1 - - [26/May/2025 11:56:24] "[33mGET /static/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 11:56:24,251 - INFO - 127.0.0.1 - - [26/May/2025 11:56:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:27,540 - DEBUG - Accessed editer_materiel route for ID: 16, method: POST
+2025-05-26 11:56:27,572 - INFO - Updated material ID: 16, Image_Path: 33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg
+2025-05-26 11:56:27,573 - INFO - 127.0.0.1 - - [26/May/2025 11:56:27] "[32mPOST /editer_materiel/16 HTTP/1.1[0m" 302 -
+2025-05-26 11:56:27,858 - INFO - 127.0.0.1 - - [26/May/2025 11:56:27] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:56:28,195 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,199 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,204 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/33881258d07e4165b7ad5c0b7583c2b0_imprimante.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,207 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,212 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "GET /generer_code_barre/16 HTTP/1.1" 200 -
+2025-05-26 11:56:28,214 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:56:28,515 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,516 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,517 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:56:28,523 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:28,524 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:56:28,528 - INFO - 127.0.0.1 - - [26/May/2025 11:56:28] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:56:43,901 - DEBUG - Accessed supprimer_materiel route for ID: 16
+2025-05-26 11:56:43,911 - INFO - Deleted material ID: 16
+2025-05-26 11:56:43,912 - INFO - 127.0.0.1 - - [26/May/2025 11:56:43] "[32mPOST /supprimer_materiel/16 HTTP/1.1[0m" 302 -
+2025-05-26 11:56:43,918 - INFO - 127.0.0.1 - - [26/May/2025 11:56:43] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:56:44,167 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,250 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,251 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,251 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,257 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,264 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:56:44,480 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:56:44,555 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:44,561 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:56:44,561 - INFO - 127.0.0.1 - - [26/May/2025 11:56:44] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:56:49,838 - DEBUG - Accessed editer_materiel route for ID: 20, method: GET
+2025-05-26 11:56:49,842 - INFO - 127.0.0.1 - - [26/May/2025 11:56:49] "GET /editer_materiel/20 HTTP/1.1" 200 -
+2025-05-26 11:56:49,978 - INFO - 127.0.0.1 - - [26/May/2025 11:56:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:50,102 - INFO - 127.0.0.1 - - [26/May/2025 11:56:50] "[33mGET /static/20_pc.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 11:56:50,182 - INFO - 127.0.0.1 - - [26/May/2025 11:56:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:53,354 - DEBUG - Accessed editer_materiel route for ID: 20, method: POST
+2025-05-26 11:56:53,368 - INFO - Updated material ID: 20, Image_Path: 20_pc.jpeg
+2025-05-26 11:56:53,369 - INFO - 127.0.0.1 - - [26/May/2025 11:56:53] "[32mPOST /editer_materiel/20 HTTP/1.1[0m" 302 -
+2025-05-26 11:56:53,671 - INFO - 127.0.0.1 - - [26/May/2025 11:56:53] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:56:54,014 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,017 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,020 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,025 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,030 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:56:54,032 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:56:54,337 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,338 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:56:54,347 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:56:54,348 - INFO - 127.0.0.1 - - [26/May/2025 11:56:54] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:56:59,283 - DEBUG - Accessed affectations route
+2025-05-26 11:56:59,291 - INFO - 127.0.0.1 - - [26/May/2025 11:56:59] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 11:56:59,599 - INFO - 127.0.0.1 - - [26/May/2025 11:56:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:56:59,617 - INFO - 127.0.0.1 - - [26/May/2025 11:56:59] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:57:00,390 - DEBUG - Accessed affectations route
+2025-05-26 11:57:00,394 - INFO - 127.0.0.1 - - [26/May/2025 11:57:00] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 11:57:00,418 - INFO - 127.0.0.1 - - [26/May/2025 11:57:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:57:00,637 - INFO - 127.0.0.1 - - [26/May/2025 11:57:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:57:06,935 - INFO - 127.0.0.1 - - [26/May/2025 11:57:06] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 11:57:07,023 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,194 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,275 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,277 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,280 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,282 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 11:57:07,340 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 11:57:07,506 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 11:57:07,593 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 11:57:07,594 - INFO - 127.0.0.1 - - [26/May/2025 11:57:07] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 11:57:54,485 - INFO - 127.0.0.1 - - [26/May/2025 11:57:54] "GET /ajouter_materiel HTTP/1.1" 200 -
+2025-05-26 11:57:54,787 - INFO - 127.0.0.1 - - [26/May/2025 11:57:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 11:57:54,803 - INFO - 127.0.0.1 - - [26/May/2025 11:57:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 11:59:55,198 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:59:56,035 - INFO -  * Restarting with stat
+2025-05-26 11:59:56,622 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 11:59:57,287 - INFO -  * Restarting with stat
+2025-05-26 11:59:58,770 - WARNING -  * Debugger is active!
+2025-05-26 11:59:58,784 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 11:59:58,837 - WARNING -  * Debugger is active!
+2025-05-26 11:59:58,849 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 12:05:24,186 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:05:24,312 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,367 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,505 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,506 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,520 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,545 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:05:24,630 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:05:24,673 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:24,813 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:05:24,814 - INFO - 127.0.0.1 - - [26/May/2025 12:05:24] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:05:32,487 - INFO - 127.0.0.1 - - [26/May/2025 12:05:32] "[32mGET /editer_materiel/17 HTTP/1.1[0m" 302 -
+2025-05-26 12:05:32,641 - DEBUG - Accessed login route, method: GET
+2025-05-26 12:05:32,646 - INFO - 127.0.0.1 - - [26/May/2025 12:05:32] "GET /login?next=http://localhost:5000/editer_materiel/17 HTTP/1.1" 200 -
+2025-05-26 12:05:32,750 - INFO - 127.0.0.1 - - [26/May/2025 12:05:32] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:38,557 - DEBUG - Accessed login route, method: POST
+2025-05-26 12:05:38,804 - INFO - User admin@example.com logged in successfully
+2025-05-26 12:05:38,805 - INFO - 127.0.0.1 - - [26/May/2025 12:05:38] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 12:05:38,866 - DEBUG - Accessed index route
+2025-05-26 12:05:38,870 - INFO - 127.0.0.1 - - [26/May/2025 12:05:38] "GET / HTTP/1.1" 200 -
+2025-05-26 12:05:39,191 - INFO - 127.0.0.1 - - [26/May/2025 12:05:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:39,192 - INFO - 127.0.0.1 - - [26/May/2025 12:05:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:39,446 - DEBUG - Accessed api_stats route
+2025-05-26 12:05:39,449 - INFO - 127.0.0.1 - - [26/May/2025 12:05:39] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:05:41,449 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:05:41,746 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:41,782 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:41,785 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:41,789 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:41,794 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:41,798 - INFO - 127.0.0.1 - - [26/May/2025 12:05:41] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:05:42,062 - INFO - 127.0.0.1 - - [26/May/2025 12:05:42] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:05:42,093 - INFO - 127.0.0.1 - - [26/May/2025 12:05:42] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:42,098 - INFO - 127.0.0.1 - - [26/May/2025 12:05:42] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:05:42,099 - INFO - 127.0.0.1 - - [26/May/2025 12:05:42] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:05:44,253 - DEBUG - Accessed editer_materiel route for ID: 17, method: GET
+2025-05-26 12:05:44,269 - INFO - 127.0.0.1 - - [26/May/2025 12:05:44] "GET /editer_materiel/17 HTTP/1.1" 200 -
+2025-05-26 12:05:44,365 - INFO - 127.0.0.1 - - [26/May/2025 12:05:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:44,505 - INFO - 127.0.0.1 - - [26/May/2025 12:05:44] "[33mGET /static/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 12:05:44,598 - INFO - 127.0.0.1 - - [26/May/2025 12:05:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,514 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:05:48,819 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,835 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,836 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,851 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,855 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:48,858 - INFO - 127.0.0.1 - - [26/May/2025 12:05:48] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:05:49,140 - INFO - 127.0.0.1 - - [26/May/2025 12:05:49] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:05:49,148 - INFO - 127.0.0.1 - - [26/May/2025 12:05:49] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:49,155 - INFO - 127.0.0.1 - - [26/May/2025 12:05:49] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:05:49,163 - INFO - 127.0.0.1 - - [26/May/2025 12:05:49] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:05:56,635 - DEBUG - Accessed editer_materiel route for ID: 17, method: GET
+2025-05-26 12:05:56,637 - INFO - 127.0.0.1 - - [26/May/2025 12:05:56] "GET /editer_materiel/17 HTTP/1.1" 200 -
+2025-05-26 12:05:56,741 - INFO - 127.0.0.1 - - [26/May/2025 12:05:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:56,895 - INFO - 127.0.0.1 - - [26/May/2025 12:05:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:56,967 - INFO - 127.0.0.1 - - [26/May/2025 12:05:56] "[33mGET /static/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 12:05:58,275 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:05:58,575 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,618 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,620 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,622 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,629 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,631 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:05:58,888 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:05:58,936 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:05:58,940 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:05:58,941 - INFO - 127.0.0.1 - - [26/May/2025 12:05:58] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:06:12,828 - DEBUG - Accessed affectations route
+2025-05-26 12:06:12,854 - INFO - 127.0.0.1 - - [26/May/2025 12:06:12] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:06:12,922 - INFO - 127.0.0.1 - - [26/May/2025 12:06:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:06:13,075 - INFO - 127.0.0.1 - - [26/May/2025 12:06:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,473 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:06:16,779 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,792 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,792 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,800 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,804 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:06:16,807 - INFO - 127.0.0.1 - - [26/May/2025 12:06:16] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:06:17,092 - INFO - 127.0.0.1 - - [26/May/2025 12:06:17] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:06:17,097 - INFO - 127.0.0.1 - - [26/May/2025 12:06:17] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:06:17,102 - INFO - 127.0.0.1 - - [26/May/2025 12:06:17] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:06:17,110 - INFO - 127.0.0.1 - - [26/May/2025 12:06:17] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:06:22,160 - DEBUG - Accessed editer_materiel route for ID: 17, method: GET
+2025-05-26 12:06:22,166 - INFO - 127.0.0.1 - - [26/May/2025 12:06:22] "GET /editer_materiel/17 HTTP/1.1" 200 -
+2025-05-26 12:06:22,225 - INFO - 127.0.0.1 - - [26/May/2025 12:06:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:06:22,425 - INFO - 127.0.0.1 - - [26/May/2025 12:06:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:06:22,489 - INFO - 127.0.0.1 - - [26/May/2025 12:06:22] "[33mGET /static/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 12:10:11,060 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 12:10:11,199 - INFO -  * Restarting with stat
+2025-05-26 12:10:12,092 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 12:10:12,538 - INFO -  * Restarting with stat
+2025-05-26 12:12:59,930 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-26 12:12:59,930 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-26 12:12:59,932 - INFO -  * Restarting with stat
+2025-05-26 12:13:00,759 - WARNING -  * Debugger is active!
+2025-05-26 12:13:00,766 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 12:13:02,050 - INFO - 127.0.0.1 - - [26/May/2025 12:13:02] "[32mGET /editer_materiel/17 HTTP/1.1[0m" 302 -
+2025-05-26 12:13:02,058 - DEBUG - Accessed login route, method: GET
+2025-05-26 12:13:02,062 - INFO - 127.0.0.1 - - [26/May/2025 12:13:02] "GET /login?next=http://localhost:5000/editer_materiel/17 HTTP/1.1" 200 -
+2025-05-26 12:13:02,369 - INFO - 127.0.0.1 - - [26/May/2025 12:13:02] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:10,476 - DEBUG - Accessed login route, method: POST
+2025-05-26 12:13:10,768 - INFO - User admin@example.com logged in successfully
+2025-05-26 12:13:10,768 - INFO - 127.0.0.1 - - [26/May/2025 12:13:10] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 12:13:10,782 - DEBUG - Accessed index route
+2025-05-26 12:13:10,796 - INFO - 127.0.0.1 - - [26/May/2025 12:13:10] "GET / HTTP/1.1" 200 -
+2025-05-26 12:13:11,131 - INFO - 127.0.0.1 - - [26/May/2025 12:13:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:11,132 - INFO - 127.0.0.1 - - [26/May/2025 12:13:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:11,391 - DEBUG - Accessed api_stats route
+2025-05-26 12:13:11,394 - INFO - 127.0.0.1 - - [26/May/2025 12:13:11] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:13:13,207 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:13:13,489 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,552 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,553 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,555 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,561 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,587 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:13:13,808 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:13:13,870 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:13,875 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:13:13,879 - INFO - 127.0.0.1 - - [26/May/2025 12:13:13] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:13:18,810 - DEBUG - Accessed editer_materiel route for ID: 18, method: GET
+2025-05-26 12:13:18,825 - INFO - 127.0.0.1 - - [26/May/2025 12:13:18] "GET /editer_materiel/18 HTTP/1.1" 200 -
+2025-05-26 12:13:18,952 - INFO - 127.0.0.1 - - [26/May/2025 12:13:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:19,076 - INFO - 127.0.0.1 - - [26/May/2025 12:13:19] "[33mGET /static/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 12:13:19,151 - INFO - 127.0.0.1 - - [26/May/2025 12:13:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:23,321 - DEBUG - Accessed editer_materiel route for ID: 18, method: POST
+2025-05-26 12:13:23,347 - INFO - Updated material ID: 18, affecte_a: 123456
+2025-05-26 12:13:23,348 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "[32mPOST /editer_materiel/18 HTTP/1.1[0m" 302 -
+2025-05-26 12:13:23,633 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:13:23,979 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:23,982 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:23,984 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:23,989 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:23,997 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:13:23,998 - INFO - 127.0.0.1 - - [26/May/2025 12:13:23] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:13:24,293 - INFO - 127.0.0.1 - - [26/May/2025 12:13:24] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:24,296 - INFO - 127.0.0.1 - - [26/May/2025 12:13:24] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:13:24,297 - INFO - 127.0.0.1 - - [26/May/2025 12:13:24] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:13:24,302 - INFO - 127.0.0.1 - - [26/May/2025 12:13:24] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:13:31,050 - DEBUG - Accessed affectations route
+2025-05-26 12:13:31,074 - INFO - 127.0.0.1 - - [26/May/2025 12:13:31] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:13:31,191 - INFO - 127.0.0.1 - - [26/May/2025 12:13:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:31,309 - INFO - 127.0.0.1 - - [26/May/2025 12:13:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:13:33,464 - DEBUG - Accessed affectations route
+2025-05-26 12:13:33,469 - INFO - 127.0.0.1 - - [26/May/2025 12:13:33] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:13:33,774 - INFO - 127.0.0.1 - - [26/May/2025 12:13:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:13:33,806 - INFO - 127.0.0.1 - - [26/May/2025 12:13:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:14:58,849 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 12:15:01,259 - INFO -  * Restarting with stat
+2025-05-26 12:15:04,148 - WARNING -  * Debugger is active!
+2025-05-26 12:15:04,154 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 12:15:21,388 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 12:15:22,744 - INFO -  * Restarting with stat
+2025-05-26 12:15:25,358 - WARNING -  * Debugger is active!
+2025-05-26 12:15:25,367 - INFO -  * Debugger PIN: 547-924-811
+2025-05-26 12:15:25,427 - INFO - 127.0.0.1 - - [26/May/2025 12:15:25] "[32mGET /affectations HTTP/1.1[0m" 302 -
+2025-05-26 12:15:25,431 - DEBUG - Accessed login route, method: GET
+2025-05-26 12:15:25,436 - INFO - 127.0.0.1 - - [26/May/2025 12:15:25] "GET /login?next=http://localhost:5000/affectations HTTP/1.1" 200 -
+2025-05-26 12:15:25,532 - INFO - 127.0.0.1 - - [26/May/2025 12:15:25] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:34,778 - DEBUG - Accessed login route, method: POST
+2025-05-26 12:15:35,070 - INFO - User admin@example.com logged in successfully
+2025-05-26 12:15:35,070 - INFO - 127.0.0.1 - - [26/May/2025 12:15:35] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-26 12:15:35,074 - DEBUG - Accessed index route
+2025-05-26 12:15:35,087 - INFO - 127.0.0.1 - - [26/May/2025 12:15:35] "GET / HTTP/1.1" 200 -
+2025-05-26 12:15:35,108 - INFO - 127.0.0.1 - - [26/May/2025 12:15:35] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:15:35,420 - DEBUG - Accessed api_stats route
+2025-05-26 12:15:35,423 - INFO - 127.0.0.1 - - [26/May/2025 12:15:35] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:15:35,436 - INFO - 127.0.0.1 - - [26/May/2025 12:15:35] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:36,668 - INFO - 127.0.0.1 - - [26/May/2025 12:15:36] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:15:36,942 - INFO - 127.0.0.1 - - [26/May/2025 12:15:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,007 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,009 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,012 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,013 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,038 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:15:37,251 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:37,316 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:15:37,327 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:15:37,328 - INFO - 127.0.0.1 - - [26/May/2025 12:15:37] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:15:39,161 - DEBUG - Accessed affectations route
+2025-05-26 12:15:39,182 - INFO - 127.0.0.1 - - [26/May/2025 12:15:39] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:15:39,298 - INFO - 127.0.0.1 - - [26/May/2025 12:15:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:15:39,425 - INFO - 127.0.0.1 - - [26/May/2025 12:15:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:57,902 - INFO - 127.0.0.1 - - [26/May/2025 12:15:57] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:15:58,201 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,243 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,245 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,245 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,259 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,262 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:15:58,517 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:15:58,561 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:15:58,570 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:15:58,573 - INFO - 127.0.0.1 - - [26/May/2025 12:15:58] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:15:59,181 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:15:59,183 - DEBUG - Total employes fetched: 3
+2025-05-26 12:15:59,185 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:15:59,187 - DEBUG - Directions fetched: ['IT Department']
+2025-05-26 12:15:59,228 - INFO - 127.0.0.1 - - [26/May/2025 12:15:59] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:15:59,321 - INFO - 127.0.0.1 - - [26/May/2025 12:15:59] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:15:59,446 - INFO - 127.0.0.1 - - [26/May/2025 12:15:59] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:01,745 - DEBUG - Accessed editer_utilisateur route for ID: 3, method: GET
+2025-05-26 12:16:01,827 - INFO - 127.0.0.1 - - [26/May/2025 12:16:01] "GET /utilisateur/editer/3 HTTP/1.1" 200 -
+2025-05-26 12:16:02,053 - INFO - 127.0.0.1 - - [26/May/2025 12:16:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:16:02,176 - INFO - 127.0.0.1 - - [26/May/2025 12:16:02] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,024 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:16:13,124 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,278 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,370 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,371 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,373 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,378 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:16:13,433 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:16:13,587 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:16:13,680 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:16:13,686 - INFO - 127.0.0.1 - - [26/May/2025 12:16:13] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:16:15,988 - DEBUG - Accessed affectations route
+2025-05-26 12:16:15,994 - INFO - 127.0.0.1 - - [26/May/2025 12:16:15] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:16:16,102 - INFO - 127.0.0.1 - - [26/May/2025 12:16:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:16:16,256 - INFO - 127.0.0.1 - - [26/May/2025 12:16:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:39,040 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:16:39,041 - DEBUG - Total employes fetched: 3
+2025-05-26 12:16:39,044 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:16:39,045 - DEBUG - Directions fetched: ['IT Department']
+2025-05-26 12:16:39,046 - INFO - 127.0.0.1 - - [26/May/2025 12:16:39] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:16:39,344 - INFO - 127.0.0.1 - - [26/May/2025 12:16:39] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:16:39,376 - INFO - 127.0.0.1 - - [26/May/2025 12:16:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:16:40,662 - DEBUG - Accessed ajouter_utilisateur route, method: GET
+2025-05-26 12:16:40,700 - INFO - 127.0.0.1 - - [26/May/2025 12:16:40] "GET /utilisateur/ajouter HTTP/1.1" 200 -
+2025-05-26 12:16:40,759 - INFO - 127.0.0.1 - - [26/May/2025 12:16:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:16:40,911 - INFO - 127.0.0.1 - - [26/May/2025 12:16:40] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:08,939 - DEBUG - Accessed ajouter_utilisateur route, method: GET
+2025-05-26 12:25:08,952 - INFO - 127.0.0.1 - - [26/May/2025 12:25:08] "GET /utilisateur/ajouter HTTP/1.1" 200 -
+2025-05-26 12:25:08,966 - INFO - 127.0.0.1 - - [26/May/2025 12:25:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:09,189 - INFO - 127.0.0.1 - - [26/May/2025 12:25:09] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,590 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:25:12,693 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,837 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,950 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,951 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,953 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:25:12,962 - INFO - 127.0.0.1 - - [26/May/2025 12:25:12] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:25:13,011 - INFO - 127.0.0.1 - - [26/May/2025 12:25:13] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:25:13,147 - INFO - 127.0.0.1 - - [26/May/2025 12:25:13] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:13,277 - INFO - 127.0.0.1 - - [26/May/2025 12:25:13] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:25:13,278 - INFO - 127.0.0.1 - - [26/May/2025 12:25:13] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:25:15,027 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:25:15,029 - DEBUG - Total employes fetched: 3
+2025-05-26 12:25:15,031 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:25:15,032 - DEBUG - Directions fetched: ['IT Department']
+2025-05-26 12:25:15,035 - INFO - 127.0.0.1 - - [26/May/2025 12:25:15] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:25:15,106 - INFO - 127.0.0.1 - - [26/May/2025 12:25:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:15,274 - INFO - 127.0.0.1 - - [26/May/2025 12:25:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:16,970 - DEBUG - Accessed editer_utilisateur route for ID: 3, method: GET
+2025-05-26 12:25:16,987 - INFO - 127.0.0.1 - - [26/May/2025 12:25:16] "GET /utilisateur/editer/3 HTTP/1.1" 200 -
+2025-05-26 12:25:17,276 - INFO - 127.0.0.1 - - [26/May/2025 12:25:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:17,321 - INFO - 127.0.0.1 - - [26/May/2025 12:25:17] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:42,136 - DEBUG - Accessed editer_utilisateur route for ID: 3, method: POST
+2025-05-26 12:25:42,148 - INFO - Updated user ID: 3, fields: ['Direction_Employe']
+2025-05-26 12:25:42,150 - INFO - 127.0.0.1 - - [26/May/2025 12:25:42] "[32mPOST /utilisateur/editer/3 HTTP/1.1[0m" 302 -
+2025-05-26 12:25:42,155 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:25:42,156 - DEBUG - Total employes fetched: 3
+2025-05-26 12:25:42,157 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:25:42,157 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-26 12:25:42,159 - INFO - 127.0.0.1 - - [26/May/2025 12:25:42] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:25:42,386 - INFO - 127.0.0.1 - - [26/May/2025 12:25:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:42,509 - INFO - 127.0.0.1 - - [26/May/2025 12:25:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:46,684 - DEBUG - Accessed affectations route
+2025-05-26 12:25:46,695 - INFO - 127.0.0.1 - - [26/May/2025 12:25:46] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:25:46,733 - INFO - 127.0.0.1 - - [26/May/2025 12:25:46] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:46,940 - INFO - 127.0.0.1 - - [26/May/2025 12:25:46] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:25:57,071 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:25:57,072 - DEBUG - Total employes fetched: 3
+2025-05-26 12:25:57,072 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:25:57,072 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-26 12:25:57,074 - INFO - 127.0.0.1 - - [26/May/2025 12:25:57] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:25:57,379 - INFO - 127.0.0.1 - - [26/May/2025 12:25:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:25:57,411 - INFO - 127.0.0.1 - - [26/May/2025 12:25:57] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:26:31,805 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:26:31,807 - DEBUG - Total employes fetched: 3
+2025-05-26 12:26:31,808 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:26:31,809 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-26 12:26:31,810 - INFO - 127.0.0.1 - - [26/May/2025 12:26:31] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:26:31,826 - INFO - 127.0.0.1 - - [26/May/2025 12:26:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:26:32,072 - INFO - 127.0.0.1 - - [26/May/2025 12:26:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:26:33,353 - DEBUG - Accessed ajouter_utilisateur route, method: GET
+2025-05-26 12:26:33,411 - INFO - 127.0.0.1 - - [26/May/2025 12:26:33] "[35m[1mGET /utilisateur/ajouter HTTP/1.1[0m" 500 -
+2025-05-26 12:26:33,440 - INFO - 127.0.0.1 - - [26/May/2025 12:26:33] "GET /utilisateur/ajouter?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-26 12:26:33,617 - INFO - 127.0.0.1 - - [26/May/2025 12:26:33] "GET /utilisateur/ajouter?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-26 12:26:33,742 - INFO - 127.0.0.1 - - [26/May/2025 12:26:33] "GET /utilisateur/ajouter?__debugger__=yes&cmd=resource&f=console.png&s=9fSnWTUOK2fDnGfcAlRL HTTP/1.1" 200 -
+2025-05-26 12:26:33,974 - INFO - 127.0.0.1 - - [26/May/2025 12:26:33] "GET /utilisateur/ajouter?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-26 12:31:09,917 - DEBUG - Accessed ajouter_utilisateur route, method: GET
+2025-05-26 12:31:09,949 - INFO - 127.0.0.1 - - [26/May/2025 12:31:09] "GET /utilisateur/ajouter HTTP/1.1" 200 -
+2025-05-26 12:31:09,965 - INFO - 127.0.0.1 - - [26/May/2025 12:31:09] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:31:10,183 - INFO - 127.0.0.1 - - [26/May/2025 12:31:10] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:31:14,086 - DEBUG - Accessed utilisateurs route
+2025-05-26 12:31:14,088 - DEBUG - Total employes fetched: 3
+2025-05-26 12:31:14,089 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 12:31:14,091 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-26 12:31:14,092 - INFO - 127.0.0.1 - - [26/May/2025 12:31:14] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 12:31:14,148 - INFO - 127.0.0.1 - - [26/May/2025 12:31:14] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:31:14,350 - INFO - 127.0.0.1 - - [26/May/2025 12:31:14] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:41:20,033 - DEBUG - Accessed admin_users route
+2025-05-26 12:41:20,109 - INFO - 127.0.0.1 - - [26/May/2025 12:41:20] "GET /admin/users HTTP/1.1" 200 -
+2025-05-26 12:41:20,184 - INFO - 127.0.0.1 - - [26/May/2025 12:41:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:41:20,293 - INFO - 127.0.0.1 - - [26/May/2025 12:41:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:41:22,296 - DEBUG - Accessed admin_edit_user route for ID: 1, method: GET
+2025-05-26 12:41:22,314 - INFO - 127.0.0.1 - - [26/May/2025 12:41:22] "GET /admin/users/edit/1 HTTP/1.1" 200 -
+2025-05-26 12:41:22,606 - INFO - 127.0.0.1 - - [26/May/2025 12:41:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:41:22,636 - INFO - 127.0.0.1 - - [26/May/2025 12:41:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:41:27,006 - DEBUG - Accessed admin_users route
+2025-05-26 12:41:27,008 - INFO - 127.0.0.1 - - [26/May/2025 12:41:27] "GET /admin/users HTTP/1.1" 200 -
+2025-05-26 12:41:27,149 - INFO - 127.0.0.1 - - [26/May/2025 12:41:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:41:27,270 - INFO - 127.0.0.1 - - [26/May/2025 12:41:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:41:28,689 - DEBUG - Accessed index route
+2025-05-26 12:41:28,691 - INFO - 127.0.0.1 - - [26/May/2025 12:41:28] "GET / HTTP/1.1" 200 -
+2025-05-26 12:41:28,996 - INFO - 127.0.0.1 - - [26/May/2025 12:41:28] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:41:29,027 - DEBUG - Accessed api_stats route
+2025-05-26 12:41:29,030 - INFO - 127.0.0.1 - - [26/May/2025 12:41:29] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:41:29,337 - INFO - 127.0.0.1 - - [26/May/2025 12:41:29] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:41:31,238 - DEBUG - Accessed admin_users route
+2025-05-26 12:41:31,241 - INFO - 127.0.0.1 - - [26/May/2025 12:41:31] "GET /admin/users HTTP/1.1" 200 -
+2025-05-26 12:41:31,374 - INFO - 127.0.0.1 - - [26/May/2025 12:41:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:41:31,483 - INFO - 127.0.0.1 - - [26/May/2025 12:41:31] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:43:18,655 - DEBUG - Accessed index route
+2025-05-26 12:43:18,657 - INFO - 127.0.0.1 - - [26/May/2025 12:43:18] "GET / HTTP/1.1" 200 -
+2025-05-26 12:43:18,797 - INFO - 127.0.0.1 - - [26/May/2025 12:43:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:43:18,920 - INFO - 127.0.0.1 - - [26/May/2025 12:43:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:43:18,998 - DEBUG - Accessed api_stats route
+2025-05-26 12:43:19,011 - INFO - 127.0.0.1 - - [26/May/2025 12:43:19] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:43:24,353 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:43:24,647 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,681 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,682 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,683 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,688 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,695 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:43:24,958 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:43:24,996 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:43:24,996 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 12:43:24,996 - INFO - 127.0.0.1 - - [26/May/2025 12:43:24] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:45:08,556 - INFO - 127.0.0.1 - - [26/May/2025 12:45:08] "GET /imprimer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:45:08,678 - INFO - 127.0.0.1 - - [26/May/2025 12:45:08] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:45:08,789 - INFO - 127.0.0.1 - - [26/May/2025 12:45:08] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:45:08,885 - INFO - 127.0.0.1 - - [26/May/2025 12:45:08] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:53:42,691 - DEBUG - Accessed index route
+2025-05-26 12:53:42,692 - INFO - 127.0.0.1 - - [26/May/2025 12:53:42] "GET / HTTP/1.1" 200 -
+2025-05-26 12:53:42,817 - INFO - 127.0.0.1 - - [26/May/2025 12:53:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:53:42,958 - DEBUG - Accessed api_stats route
+2025-05-26 12:53:42,976 - INFO - 127.0.0.1 - - [26/May/2025 12:53:42] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 12:53:43,021 - INFO - 127.0.0.1 - - [26/May/2025 12:53:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:53:44,649 - DEBUG - Accessed affectations route
+2025-05-26 12:53:44,661 - INFO - 127.0.0.1 - - [26/May/2025 12:53:44] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 12:53:44,953 - INFO - 127.0.0.1 - - [26/May/2025 12:53:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:53:45,000 - INFO - 127.0.0.1 - - [26/May/2025 12:53:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:53:47,664 - INFO - 127.0.0.1 - - [26/May/2025 12:53:47] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 12:53:47,784 - INFO - 127.0.0.1 - - [26/May/2025 12:53:47] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 12:53:47,907 - INFO - 127.0.0.1 - - [26/May/2025 12:53:47] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:53:48,005 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 12:53:48,006 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:53:48,006 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 12:53:48,013 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 12:53:48,097 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 12:53:48,221 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 12:53:48,319 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 12:53:48,322 - INFO - 127.0.0.1 - - [26/May/2025 12:53:48] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 14:00:55,474 - INFO - 127.0.0.1 - - [26/May/2025 14:00:55] "GET /imprimer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 14:00:55,604 - INFO - 127.0.0.1 - - [26/May/2025 14:00:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 14:00:55,747 - INFO - 127.0.0.1 - - [26/May/2025 14:00:55] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 14:00:55,824 - INFO - 127.0.0.1 - - [26/May/2025 14:00:55] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 14:01:06,085 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 14:01:06,388 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,406 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,407 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,420 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,421 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,427 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 14:01:06,701 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 14:01:06,717 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 14:01:06,719 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 14:01:06,748 - INFO - 127.0.0.1 - - [26/May/2025 14:01:06] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 14:37:52,731 - DEBUG - Accessed editer_materiel route for ID: 19, method: GET
+2025-05-26 14:37:52,764 - INFO - 127.0.0.1 - - [26/May/2025 14:37:52] "GET /editer_materiel/19 HTTP/1.1" 200 -
+2025-05-26 14:37:52,890 - INFO - 127.0.0.1 - - [26/May/2025 14:37:52] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 14:37:52,996 - INFO - 127.0.0.1 - - [26/May/2025 14:37:52] "[33mGET /static/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 404 -
+2025-05-26 14:37:53,094 - INFO - 127.0.0.1 - - [26/May/2025 14:37:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 14:37:53,116 - INFO - 127.0.0.1 - - [26/May/2025 14:37:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-26 14:37:55,754 - INFO - 127.0.0.1 - - [26/May/2025 14:37:55] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 14:37:55,876 - INFO - 127.0.0.1 - - [26/May/2025 14:37:55] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,001 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,097 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,099 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,100 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,109 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 14:37:56,188 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 14:37:56,313 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 14:37:56,411 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 14:37:56,412 - INFO - 127.0.0.1 - - [26/May/2025 14:37:56] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 15:52:45,134 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 15:52:45,154 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,364 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,457 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,476 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,476 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,482 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 15:52:45,492 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 15:52:45,672 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 15:52:45,765 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 15:52:45,796 - INFO - 127.0.0.1 - - [26/May/2025 15:52:45] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 15:52:53,382 - DEBUG - Accessed affectations route
+2025-05-26 15:52:53,391 - INFO - 127.0.0.1 - - [26/May/2025 15:52:53] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 15:52:53,513 - INFO - 127.0.0.1 - - [26/May/2025 15:52:53] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:52:53,654 - INFO - 127.0.0.1 - - [26/May/2025 15:52:53] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:52:57,957 - DEBUG - Accessed supprimer_affectation route for ID: 31
+2025-05-26 15:52:57,970 - INFO - Deleted affectation ID: 31
+2025-05-26 15:52:57,972 - INFO - 127.0.0.1 - - [26/May/2025 15:52:57] "[32mPOST /affectation/supprimer/31 HTTP/1.1[0m" 302 -
+2025-05-26 15:52:58,259 - DEBUG - Accessed affectations route
+2025-05-26 15:52:58,264 - INFO - 127.0.0.1 - - [26/May/2025 15:52:58] "GET /affectations HTTP/1.1" 200 -
+2025-05-26 15:52:58,600 - INFO - 127.0.0.1 - - [26/May/2025 15:52:58] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:52:58,601 - INFO - 127.0.0.1 - - [26/May/2025 15:52:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,099 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 15:53:01,399 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,435 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,435 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,439 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,444 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,451 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 15:53:01,709 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:01,744 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 15:53:01,757 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 15:53:01,758 - INFO - 127.0.0.1 - - [26/May/2025 15:53:01] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 15:53:16,445 - DEBUG - Accessed editer_materiel route for ID: 18, method: GET
+2025-05-26 15:53:16,449 - INFO - 127.0.0.1 - - [26/May/2025 15:53:16] "GET /editer_materiel/18 HTTP/1.1" 200 -
+2025-05-26 15:53:16,588 - INFO - 127.0.0.1 - - [26/May/2025 15:53:16] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:16,714 - INFO - 127.0.0.1 - - [26/May/2025 15:53:16] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:16,793 - INFO - 127.0.0.1 - - [26/May/2025 15:53:16] "[33mGET /static/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 404 -
+2025-05-26 15:53:27,507 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 15:53:27,821 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:27,857 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:27,858 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:27,859 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:27,859 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:27,871 - INFO - 127.0.0.1 - - [26/May/2025 15:53:27] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 15:53:28,136 - INFO - 127.0.0.1 - - [26/May/2025 15:53:28] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 15:53:28,174 - INFO - 127.0.0.1 - - [26/May/2025 15:53:28] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 15:53:28,175 - INFO - 127.0.0.1 - - [26/May/2025 15:53:28] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 15:53:28,175 - INFO - 127.0.0.1 - - [26/May/2025 15:53:28] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 15:53:34,035 - DEBUG - Accessed index route
+2025-05-26 15:53:34,037 - INFO - 127.0.0.1 - - [26/May/2025 15:53:34] "GET / HTTP/1.1" 200 -
+2025-05-26 15:53:34,177 - INFO - 127.0.0.1 - - [26/May/2025 15:53:34] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:34,302 - DEBUG - Accessed api_stats route
+2025-05-26 15:53:34,306 - INFO - 127.0.0.1 - - [26/May/2025 15:53:34] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 15:53:34,379 - INFO - 127.0.0.1 - - [26/May/2025 15:53:34] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:43,124 - DEBUG - Accessed utilisateurs route
+2025-05-26 15:53:43,126 - DEBUG - Total employes fetched: 3
+2025-05-26 15:53:43,129 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-26 15:53:43,132 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-26 15:53:43,135 - INFO - 127.0.0.1 - - [26/May/2025 15:53:43] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-26 15:53:43,429 - INFO - 127.0.0.1 - - [26/May/2025 15:53:43] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:43,474 - INFO - 127.0.0.1 - - [26/May/2025 15:53:43] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:53:51,503 - DEBUG - Accessed liste_inventaire route
+2025-05-26 15:53:51,557 - INFO - 127.0.0.1 - - [26/May/2025 15:53:51] "GET /liste_inventaire HTTP/1.1" 200 -
+2025-05-26 15:53:51,812 - INFO - 127.0.0.1 - - [26/May/2025 15:53:51] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:53:51,888 - INFO - 127.0.0.1 - - [26/May/2025 15:53:51] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 15:55:38,526 - DEBUG - Accessed index route
+2025-05-26 15:55:38,527 - INFO - 127.0.0.1 - - [26/May/2025 15:55:38] "GET / HTTP/1.1" 200 -
+2025-05-26 15:55:38,831 - INFO - 127.0.0.1 - - [26/May/2025 15:55:38] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 15:55:38,861 - DEBUG - Accessed api_stats route
+2025-05-26 15:55:38,875 - INFO - 127.0.0.1 - - [26/May/2025 15:55:38] "GET /api/stats HTTP/1.1" 200 -
+2025-05-26 15:55:39,157 - INFO - 127.0.0.1 - - [26/May/2025 15:55:39] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,273 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "GET /materiel HTTP/1.1" 200 -
+2025-05-26 16:06:18,383 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,491 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,604 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,607 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,615 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,618 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-26 16:06:18,699 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-26 16:06:18,797 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-26 16:06:18,916 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-26 16:06:18,918 - INFO - 127.0.0.1 - - [26/May/2025 16:06:18] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-26 16:13:14,721 - INFO - 127.0.0.1 - - [26/May/2025 16:13:14] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-26 17:54:19,757 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-26 17:54:20,387 - INFO -  * Restarting with stat
+2025-05-26 17:54:24,724 - WARNING -  * Debugger is active!
+2025-05-26 17:54:24,731 - INFO -  * Debugger PIN: 547-924-811
