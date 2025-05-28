@@ -8,7 +8,4 @@ weasyprint
 werkzeug
 python-barcode
 Pillow
-
-python -barcode
-
-Pillo
+python-barcode

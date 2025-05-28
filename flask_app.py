@@ -14,7 +14,7 @@ from barcode import Code128
 from barcode.writer import ImageWriter
 from PIL import Image
 
-# App setup
+
 app = Flask(__name__, static_folder='static')
 app.secret_key = os.urandom(24).hex()
 app.config['UPLOAD_FOLDER'] = os.path.join(app.static_folder, 'images')
@@ -813,12 +813,15 @@ def editer_utilisateur(id):
             query = f"UPDATE Employe SET {set_clause} WHERE ID_Employe = ?"
             params.append(id)
 
+
+
             cursor.execute(query, params)
             conn.commit()
             flash('Utilisateur mis à jour avec succès', 'success')
             logger.info(f"Updated user ID: {id}, fields: {list(update_fields.keys())}")
             conn.close()
             return redirect(url_for('utilisateurs'))
+
 
         cursor.execute("SELECT Direction_Direction FROM Direction")
         directions = [row[0] for row in cursor.fetchall()]
