@@ -20169,3 +20169,95 @@
 2025-05-28 11:59:31,931 - INFO -  * Restarting with stat
 2025-05-28 11:59:32,746 - WARNING -  * Debugger is active!
 2025-05-28 11:59:32,751 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 11:59:55,897 - INFO - 127.0.0.1 - - [28/May/2025 11:59:55] "[32mGET /utilisateurs HTTP/1.1[0m" 302 -
+2025-05-28 11:59:55,903 - DEBUG - Accessed login route, method: GET
+2025-05-28 11:59:55,912 - INFO - 127.0.0.1 - - [28/May/2025 11:59:55] "GET /login?next=http://localhost:5000/utilisateurs HTTP/1.1" 200 -
+2025-05-28 11:59:56,221 - INFO - 127.0.0.1 - - [28/May/2025 11:59:56] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 12:00:02,559 - DEBUG - Accessed login route, method: POST
+2025-05-28 12:00:02,875 - INFO - User admin@example.com logged in successfully
+2025-05-28 12:00:02,875 - INFO - 127.0.0.1 - - [28/May/2025 12:00:02] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-28 12:00:02,879 - DEBUG - Accessed index route
+2025-05-28 12:00:02,895 - INFO - 127.0.0.1 - - [28/May/2025 12:00:02] "GET / HTTP/1.1" 200 -
+2025-05-28 12:00:02,929 - INFO - 127.0.0.1 - - [28/May/2025 12:00:02] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:03,242 - INFO - 127.0.0.1 - - [28/May/2025 12:00:03] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:03,257 - DEBUG - Accessed api_stats route
+2025-05-28 12:00:03,262 - INFO - 127.0.0.1 - - [28/May/2025 12:00:03] "GET /api/stats HTTP/1.1" 200 -
+2025-05-28 12:00:05,056 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "GET /materiel HTTP/1.1" 200 -
+2025-05-28 12:00:05,154 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,275 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,390 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,391 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,391 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,422 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 12:00:05,467 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-28 12:00:05,588 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:05,697 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-28 12:00:05,704 - INFO - 127.0.0.1 - - [28/May/2025 12:00:05] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-28 12:00:11,462 - INFO - 127.0.0.1 - - [28/May/2025 12:00:11] "GET /imprimer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 12:00:11,554 - INFO - 127.0.0.1 - - [28/May/2025 12:00:11] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 12:00:11,712 - INFO - 127.0.0.1 - - [28/May/2025 12:00:11] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 12:00:11,794 - INFO - 127.0.0.1 - - [28/May/2025 12:00:11] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 12:47:52,760 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 12:47:53,057 - INFO -  * Restarting with stat
+2025-05-28 12:47:55,325 - WARNING -  * Debugger is active!
+2025-05-28 12:47:55,337 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 14:45:52,828 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 14:45:52,829 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 14:45:52,831 - INFO -  * Restarting with stat
+2025-05-28 14:45:53,681 - WARNING -  * Debugger is active!
+2025-05-28 14:45:53,693 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 14:46:40,215 - INFO - 127.0.0.1 - - [28/May/2025 14:46:40] "GET /imprimer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 14:46:40,346 - INFO - 127.0.0.1 - - [28/May/2025 14:46:40] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 14:46:40,347 - INFO - 127.0.0.1 - - [28/May/2025 14:46:40] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 14:46:40,625 - INFO - 127.0.0.1 - - [28/May/2025 14:46:40] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 14:46:40,951 - INFO - 127.0.0.1 - - [28/May/2025 14:46:40] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 16:03:12,925 - INFO - 127.0.0.1 - - [28/May/2025 16:03:12] "[32mGET /materiel HTTP/1.1[0m" 302 -
+2025-05-28 16:03:13,050 - DEBUG - Accessed login route, method: GET
+2025-05-28 16:03:13,083 - INFO - 127.0.0.1 - - [28/May/2025 16:03:13] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 16:03:13,181 - INFO - 127.0.0.1 - - [28/May/2025 16:03:13] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 16:03:20,144 - DEBUG - Accessed login route, method: POST
+2025-05-28 16:03:20,434 - INFO - User admin@example.com logged in successfully
+2025-05-28 16:03:20,435 - INFO - 127.0.0.1 - - [28/May/2025 16:03:20] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-28 16:03:20,459 - DEBUG - Accessed index route
+2025-05-28 16:03:20,489 - INFO - 127.0.0.1 - - [28/May/2025 16:03:20] "GET / HTTP/1.1" 200 -
+2025-05-28 16:03:20,819 - INFO - 127.0.0.1 - - [28/May/2025 16:03:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 16:03:20,820 - INFO - 127.0.0.1 - - [28/May/2025 16:03:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 16:03:21,083 - DEBUG - Accessed api_stats route
+2025-05-28 16:03:21,096 - INFO - 127.0.0.1 - - [28/May/2025 16:03:21] "GET /api/stats HTTP/1.1" 200 -
+2025-05-28 16:03:25,163 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "GET /materiel HTTP/1.1" 200 -
+2025-05-28 16:03:25,375 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,521 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,527 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,531 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,532 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,533 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-28 16:03:25,714 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-28 16:03:25,825 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-28 16:03:25,853 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-28 16:03:25,854 - INFO - 127.0.0.1 - - [28/May/2025 16:03:25] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-28 16:22:23,008 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 16:22:24,872 - INFO -  * Restarting with stat
+2025-05-28 16:22:26,591 - WARNING -  * Debugger is active!
+2025-05-28 16:22:26,596 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 16:23:59,711 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 16:23:59,841 - INFO -  * Restarting with stat
+2025-05-28 16:24:00,957 - WARNING -  * Debugger is active!
+2025-05-28 16:24:00,963 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 16:37:45,197 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 16:37:45,305 - INFO -  * Restarting with stat
+2025-05-28 16:37:46,282 - WARNING -  * Debugger is active!
+2025-05-28 16:37:46,288 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 16:47:50,002 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 16:47:50,129 - INFO -  * Restarting with stat
+2025-05-28 16:47:51,195 - WARNING -  * Debugger is active!
+2025-05-28 16:47:51,200 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 16:49:14,031 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-28 16:49:14,148 - INFO -  * Restarting with stat
+2025-05-28 16:49:15,075 - WARNING -  * Debugger is active!
+2025-05-28 16:49:15,081 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 16:49:55,056 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "[32mGET /materiel HTTP/1.1[0m" 302 -
+2025-05-28 16:49:55,062 - DEBUG - Accessed login route, method: GET
+2025-05-28 16:49:55,070 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 16:49:55,401 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 16:49:55,721 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
