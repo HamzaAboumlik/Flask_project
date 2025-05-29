@@ -20261,3 +20261,543 @@
 2025-05-28 16:49:55,070 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
 2025-05-28 16:49:55,401 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
 2025-05-28 16:49:55,721 - INFO - 127.0.0.1 - - [28/May/2025 16:49:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 17:15:10,826 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 17:15:10,826 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 17:15:10,828 - INFO -  * Restarting with stat
+2025-05-28 17:15:11,561 - WARNING -  * Debugger is active!
+2025-05-28 17:15:11,566 - INFO -  * Debugger PIN: 913-199-436
+2025-05-28 17:15:14,768 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:15:14,768 - INFO - 127.0.0.1 - - [28/May/2025 17:15:14] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 17:15:14,787 - INFO - 127.0.0.1 - - [28/May/2025 17:15:14] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:15,033 - INFO - 127.0.0.1 - - [28/May/2025 17:15:15] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 17:15:15,968 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:15:15,968 - INFO - 127.0.0.1 - - [28/May/2025 17:15:15] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 17:15:15,988 - INFO - 127.0.0.1 - - [28/May/2025 17:15:15] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:16,627 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:15:16,627 - INFO - 127.0.0.1 - - [28/May/2025 17:15:16] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 17:15:16,935 - INFO - 127.0.0.1 - - [28/May/2025 17:15:16] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:18,136 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:15:18,137 - INFO - 127.0.0.1 - - [28/May/2025 17:15:18] "GET /login?next=http://localhost:5000/materiel HTTP/1.1" 200 -
+2025-05-28 17:15:18,162 - INFO - 127.0.0.1 - - [28/May/2025 17:15:18] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:23,759 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:15:24,161 - WARNING - Failed login attempt for admin@example.com
+2025-05-28 17:15:24,162 - INFO - 127.0.0.1 - - [28/May/2025 17:15:24] "POST /login HTTP/1.1" 200 -
+2025-05-28 17:15:24,192 - INFO - 127.0.0.1 - - [28/May/2025 17:15:24] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:30,290 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:15:30,561 - WARNING - Failed login attempt for admin@example.com
+2025-05-28 17:15:30,562 - INFO - 127.0.0.1 - - [28/May/2025 17:15:30] "POST /login HTTP/1.1" 200 -
+2025-05-28 17:15:30,582 - INFO - 127.0.0.1 - - [28/May/2025 17:15:30] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:38,742 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:15:38,993 - WARNING - Failed login attempt for admin@example.com
+2025-05-28 17:15:38,993 - INFO - 127.0.0.1 - - [28/May/2025 17:15:38] "POST /login HTTP/1.1" 200 -
+2025-05-28 17:15:39,051 - INFO - 127.0.0.1 - - [28/May/2025 17:15:39] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:48,597 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:15:48,858 - WARNING - Failed login attempt for hamzaaboumlik37@gmail.com
+2025-05-28 17:15:48,858 - INFO - 127.0.0.1 - - [28/May/2025 17:15:48] "POST /login HTTP/1.1" 200 -
+2025-05-28 17:15:48,878 - INFO - 127.0.0.1 - - [28/May/2025 17:15:48] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:15:55,965 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:15:56,237 - INFO - User admin@example.com logged in successfully
+2025-05-28 17:15:56,237 - INFO - 127.0.0.1 - - [28/May/2025 17:15:56] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-28 17:15:56,270 - DEBUG - Accessed index route
+2025-05-28 17:15:56,289 - INFO - 127.0.0.1 - - [28/May/2025 17:15:56] "GET / HTTP/1.1" 200 -
+2025-05-28 17:15:56,618 - INFO - 127.0.0.1 - - [28/May/2025 17:15:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 17:15:56,620 - INFO - 127.0.0.1 - - [28/May/2025 17:15:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 17:15:56,866 - DEBUG - Accessed api_stats route
+2025-05-28 17:15:56,872 - INFO - 127.0.0.1 - - [28/May/2025 17:15:56] "GET /api/stats HTTP/1.1" 200 -
+2025-05-28 17:35:23,273 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-28 17:35:23,273 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 17:35:23,276 - INFO -  * Restarting with stat
+2025-05-28 17:35:24,477 - WARNING -  * Debugger is active!
+2025-05-28 17:35:24,484 - INFO -  * Debugger PIN: 547-924-811
+2025-05-28 17:35:24,548 - DEBUG - Accessed index route
+2025-05-28 17:35:24,576 - INFO - 127.0.0.1 - - [28/May/2025 17:35:24] "GET / HTTP/1.1" 200 -
+2025-05-28 17:35:24,751 - INFO - 127.0.0.1 - - [28/May/2025 17:35:24] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 17:35:24,753 - INFO - 127.0.0.1 - - [28/May/2025 17:35:24] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 17:35:25,260 - INFO - 127.0.0.1 - - [28/May/2025 17:35:25] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-28 17:35:25,290 - INFO - 127.0.0.1 - - [28/May/2025 17:35:25] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-28 17:35:25,524 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:35:25,526 - INFO - 127.0.0.1 - - [28/May/2025 17:35:25] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-28 17:35:28,863 - DEBUG - Accessed login route, method: GET
+2025-05-28 17:35:28,864 - INFO - 127.0.0.1 - - [28/May/2025 17:35:28] "GET /login HTTP/1.1" 200 -
+2025-05-28 17:35:29,174 - INFO - 127.0.0.1 - - [28/May/2025 17:35:29] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-28 17:35:43,813 - DEBUG - Accessed login route, method: POST
+2025-05-28 17:35:44,140 - INFO - User admin@example.com logged in successfully
+2025-05-28 17:35:44,141 - INFO - 127.0.0.1 - - [28/May/2025 17:35:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-28 17:35:44,144 - DEBUG - Accessed index route
+2025-05-28 17:35:44,144 - INFO - 127.0.0.1 - - [28/May/2025 17:35:44] "GET / HTTP/1.1" 200 -
+2025-05-28 17:35:44,176 - INFO - 127.0.0.1 - - [28/May/2025 17:35:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-28 17:35:44,486 - INFO - 127.0.0.1 - - [28/May/2025 17:35:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-28 17:35:44,501 - DEBUG - Accessed api_stats route
+2025-05-28 17:35:44,505 - INFO - 127.0.0.1 - - [28/May/2025 17:35:44] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 09:22:10,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 09:22:10,191 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 09:22:10,194 - INFO -  * Restarting with stat
+2025-05-29 09:22:11,814 - WARNING -  * Debugger is active!
+2025-05-29 09:22:11,831 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 09:27:36,784 - DEBUG - Accessed index route
+2025-05-29 09:27:36,938 - INFO - 127.0.0.1 - - [29/May/2025 09:27:36] "GET / HTTP/1.1" 200 -
+2025-05-29 09:27:37,227 - INFO - 127.0.0.1 - - [29/May/2025 09:27:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 09:27:37,260 - INFO - 127.0.0.1 - - [29/May/2025 09:27:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 09:27:37,576 - INFO - 127.0.0.1 - - [29/May/2025 09:27:37] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-29 09:27:37,585 - INFO - 127.0.0.1 - - [29/May/2025 09:27:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 09:27:37,841 - DEBUG - Accessed login route, method: GET
+2025-05-29 09:27:37,880 - INFO - 127.0.0.1 - - [29/May/2025 09:27:37] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-29 09:27:39,273 - DEBUG - Accessed login route, method: GET
+2025-05-29 09:27:39,274 - INFO - 127.0.0.1 - - [29/May/2025 09:27:39] "GET /login HTTP/1.1" 200 -
+2025-05-29 09:27:39,591 - INFO - 127.0.0.1 - - [29/May/2025 09:27:39] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 09:29:35,981 - DEBUG - Accessed login route, method: POST
+2025-05-29 09:29:36,686 - INFO - User admin@example.com logged in successfully
+2025-05-29 09:29:36,687 - INFO - 127.0.0.1 - - [29/May/2025 09:29:36] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 09:29:36,690 - DEBUG - Accessed index route
+2025-05-29 09:29:36,691 - INFO - 127.0.0.1 - - [29/May/2025 09:29:36] "GET / HTTP/1.1" 200 -
+2025-05-29 09:29:36,727 - INFO - 127.0.0.1 - - [29/May/2025 09:29:36] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 09:29:37,035 - INFO - 127.0.0.1 - - [29/May/2025 09:29:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 09:29:37,079 - DEBUG - Accessed api_stats route
+2025-05-29 09:29:37,091 - INFO - 127.0.0.1 - - [29/May/2025 09:29:37] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 09:53:13,946 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 09:53:14,103 - INFO -  * Restarting with stat
+2025-05-29 10:26:19,722 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 10:26:19,722 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 10:26:19,724 - INFO -  * Restarting with stat
+2025-05-29 10:26:20,668 - WARNING -  * Debugger is active!
+2025-05-29 10:26:20,675 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:26:21,663 - DEBUG - Accessed index route
+2025-05-29 10:26:21,690 - INFO - 127.0.0.1 - - [29/May/2025 10:26:21] "GET / HTTP/1.1" 200 -
+2025-05-29 10:26:21,810 - INFO - 127.0.0.1 - - [29/May/2025 10:26:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:26:21,924 - INFO - 127.0.0.1 - - [29/May/2025 10:26:21] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:26:22,307 - INFO - 127.0.0.1 - - [29/May/2025 10:26:22] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-29 10:26:22,321 - INFO - 127.0.0.1 - - [29/May/2025 10:26:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 10:26:22,569 - DEBUG - Accessed login route, method: GET
+2025-05-29 10:26:22,571 - INFO - 127.0.0.1 - - [29/May/2025 10:26:22] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-29 10:26:23,280 - DEBUG - Accessed login route, method: GET
+2025-05-29 10:26:23,281 - INFO - 127.0.0.1 - - [29/May/2025 10:26:23] "GET /login HTTP/1.1" 200 -
+2025-05-29 10:26:23,594 - INFO - 127.0.0.1 - - [29/May/2025 10:26:23] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 10:26:29,478 - DEBUG - Accessed login route, method: POST
+2025-05-29 10:26:29,557 - DEBUG - bcrypt 'builtin' backend not enabled via $PASSLIB_BUILTIN_BCRYPT
+2025-05-29 10:26:29,586 - INFO - 127.0.0.1 - - [29/May/2025 10:26:29] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-05-29 10:26:29,623 - INFO - 127.0.0.1 - - [29/May/2025 10:26:29] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-29 10:26:29,775 - INFO - 127.0.0.1 - - [29/May/2025 10:26:29] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-29 10:26:30,113 - INFO - 127.0.0.1 - - [29/May/2025 10:26:30] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=PFDCb3uvXX6gCMj4eIna HTTP/1.1" 200 -
+2025-05-29 10:26:30,378 - INFO - 127.0.0.1 - - [29/May/2025 10:26:30] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-29 10:29:37,339 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:29:37,476 - INFO -  * Restarting with stat
+2025-05-29 10:29:38,552 - WARNING -  * Debugger is active!
+2025-05-29 10:29:38,564 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:30:54,753 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:30:54,885 - INFO -  * Restarting with stat
+2025-05-29 10:30:55,948 - WARNING -  * Debugger is active!
+2025-05-29 10:30:55,955 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:31:21,990 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:31:22,077 - INFO -  * Restarting with stat
+2025-05-29 10:31:22,995 - WARNING -  * Debugger is active!
+2025-05-29 10:31:23,000 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:31:44,088 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:31:44,660 - INFO -  * Restarting with stat
+2025-05-29 10:31:48,578 - WARNING -  * Debugger is active!
+2025-05-29 10:31:48,584 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:32:11,273 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:32:11,624 - INFO -  * Restarting with stat
+2025-05-29 10:32:15,139 - WARNING -  * Debugger is active!
+2025-05-29 10:32:15,150 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:32:28,334 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:32:30,253 - INFO -  * Restarting with stat
+2025-05-29 10:32:31,741 - WARNING -  * Debugger is active!
+2025-05-29 10:32:31,745 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:32:33,190 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 10:32:33,190 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 10:32:33,193 - INFO -  * Restarting with stat
+2025-05-29 10:32:34,631 - WARNING -  * Debugger is active!
+2025-05-29 10:32:34,636 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 10:32:37,449 - INFO - 127.0.0.1 - - [29/May/2025 10:32:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 10:32:37,921 - DEBUG - Accessed login route, method: GET
+2025-05-29 10:32:37,932 - INFO - 127.0.0.1 - - [29/May/2025 10:32:37] "GET /login HTTP/1.1" 200 -
+2025-05-29 10:32:38,116 - INFO - 127.0.0.1 - - [29/May/2025 10:32:38] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 10:32:45,875 - DEBUG - Accessed login route, method: POST
+2025-05-29 10:32:45,936 - ERROR - Invalid password format for user admin@example.com: not a valid pbkdf2_sha256 hash
+2025-05-29 10:32:45,936 - INFO - 127.0.0.1 - - [29/May/2025 10:32:45] "POST /login HTTP/1.1" 200 -
+2025-05-29 10:32:45,955 - INFO - 127.0.0.1 - - [29/May/2025 10:32:45] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 10:34:33,156 - DEBUG - Accessed login route, method: POST
+2025-05-29 10:34:33,181 - INFO - User admin@example.com logged in successfully
+2025-05-29 10:34:33,182 - INFO - 127.0.0.1 - - [29/May/2025 10:34:33] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 10:34:33,185 - DEBUG - Accessed index route
+2025-05-29 10:34:33,201 - INFO - 127.0.0.1 - - [29/May/2025 10:34:33] "GET / HTTP/1.1" 200 -
+2025-05-29 10:34:33,422 - INFO - 127.0.0.1 - - [29/May/2025 10:34:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:34:33,530 - DEBUG - Accessed api_stats route
+2025-05-29 10:34:33,533 - INFO - 127.0.0.1 - - [29/May/2025 10:34:33] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 10:34:33,749 - INFO - 127.0.0.1 - - [29/May/2025 10:34:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:34:34,057 - INFO - 127.0.0.1 - - [29/May/2025 10:34:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 10:34:37,013 - DEBUG - Accessed logout route
+2025-05-29 10:34:37,013 - INFO - User logged out
+2025-05-29 10:34:37,014 - INFO - 127.0.0.1 - - [29/May/2025 10:34:37] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-29 10:34:37,317 - DEBUG - Accessed login route, method: GET
+2025-05-29 10:34:37,318 - INFO - 127.0.0.1 - - [29/May/2025 10:34:37] "GET /login HTTP/1.1" 200 -
+2025-05-29 10:34:37,660 - INFO - 127.0.0.1 - - [29/May/2025 10:34:37] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 10:34:44,641 - DEBUG - Accessed login route, method: POST
+2025-05-29 10:34:44,647 - INFO - User admin@example.com logged in successfully
+2025-05-29 10:34:44,647 - INFO - 127.0.0.1 - - [29/May/2025 10:34:44] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 10:34:44,953 - DEBUG - Accessed index route
+2025-05-29 10:34:44,955 - INFO - 127.0.0.1 - - [29/May/2025 10:34:44] "GET / HTTP/1.1" 200 -
+2025-05-29 10:34:45,300 - INFO - 127.0.0.1 - - [29/May/2025 10:34:45] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:34:45,301 - INFO - 127.0.0.1 - - [29/May/2025 10:34:45] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:34:45,566 - DEBUG - Accessed api_stats route
+2025-05-29 10:34:45,568 - INFO - 127.0.0.1 - - [29/May/2025 10:34:45] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 10:35:06,728 - DEBUG - Accessed index route
+2025-05-29 10:35:06,730 - INFO - 127.0.0.1 - - [29/May/2025 10:35:06] "GET / HTTP/1.1" 200 -
+2025-05-29 10:35:07,043 - INFO - 127.0.0.1 - - [29/May/2025 10:35:07] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:07,049 - INFO - 127.0.0.1 - - [29/May/2025 10:35:07] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:07,378 - DEBUG - Accessed api_stats route
+2025-05-29 10:35:07,389 - INFO - 127.0.0.1 - - [29/May/2025 10:35:07] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 10:35:08,867 - DEBUG - Accessed logout route
+2025-05-29 10:35:08,868 - INFO - User logged out
+2025-05-29 10:35:08,868 - INFO - 127.0.0.1 - - [29/May/2025 10:35:08] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-29 10:35:09,181 - DEBUG - Accessed login route, method: GET
+2025-05-29 10:35:09,181 - INFO - 127.0.0.1 - - [29/May/2025 10:35:09] "GET /login HTTP/1.1" 200 -
+2025-05-29 10:35:09,512 - INFO - 127.0.0.1 - - [29/May/2025 10:35:09] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 10:35:14,630 - DEBUG - Accessed login route, method: POST
+2025-05-29 10:35:14,638 - INFO - User hamzaaboumlik37@gmail.com logged in successfully
+2025-05-29 10:35:14,639 - INFO - 127.0.0.1 - - [29/May/2025 10:35:14] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 10:35:14,938 - DEBUG - Accessed index route
+2025-05-29 10:35:14,939 - INFO - 127.0.0.1 - - [29/May/2025 10:35:14] "GET / HTTP/1.1" 200 -
+2025-05-29 10:35:15,283 - INFO - 127.0.0.1 - - [29/May/2025 10:35:15] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:15,284 - INFO - 127.0.0.1 - - [29/May/2025 10:35:15] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:15,545 - DEBUG - Accessed api_stats route
+2025-05-29 10:35:15,550 - INFO - 127.0.0.1 - - [29/May/2025 10:35:15] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 10:35:17,686 - DEBUG - Accessed index route
+2025-05-29 10:35:17,687 - INFO - 127.0.0.1 - - [29/May/2025 10:35:17] "GET / HTTP/1.1" 200 -
+2025-05-29 10:35:17,989 - INFO - 127.0.0.1 - - [29/May/2025 10:35:17] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:18,002 - INFO - 127.0.0.1 - - [29/May/2025 10:35:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:18,312 - DEBUG - Accessed api_stats route
+2025-05-29 10:35:18,313 - INFO - 127.0.0.1 - - [29/May/2025 10:35:18] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 10:35:18,652 - DEBUG - Accessed utilisateurs route
+2025-05-29 10:35:18,661 - DEBUG - Total employes fetched: 3
+2025-05-29 10:35:18,664 - DEBUG - Services fetched: ['Comptabilité', 'IT Support']
+2025-05-29 10:35:18,665 - DEBUG - Directions fetched: ['IT Department', 'Ressources Humaines']
+2025-05-29 10:35:18,706 - INFO - 127.0.0.1 - - [29/May/2025 10:35:18] "GET /utilisateurs HTTP/1.1" 200 -
+2025-05-29 10:35:18,962 - INFO - 127.0.0.1 - - [29/May/2025 10:35:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:19,039 - INFO - 127.0.0.1 - - [29/May/2025 10:35:19] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:19,977 - INFO - 127.0.0.1 - - [29/May/2025 10:35:19] "GET /materiel HTTP/1.1" 200 -
+2025-05-29 10:35:20,054 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,184 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,299 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,317 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,325 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,399 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-29 10:35:20,399 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-29 10:35:20,516 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:20,627 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-29 10:35:20,638 - INFO - 127.0.0.1 - - [29/May/2025 10:35:20] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-29 10:35:21,024 - DEBUG - Accessed affectations route
+2025-05-29 10:35:21,075 - INFO - 127.0.0.1 - - [29/May/2025 10:35:21] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 10:35:21,094 - INFO - 127.0.0.1 - - [29/May/2025 10:35:21] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:21,277 - INFO - 127.0.0.1 - - [29/May/2025 10:35:21] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:35:22,011 - DEBUG - Total employés: 3
+2025-05-29 10:35:22,011 - DEBUG - Total articles: 4
+2025-05-29 10:35:22,011 - DEBUG - Articles affectés: 2
+2025-05-29 10:35:22,011 - DEBUG - Articles non affectés: 2
+2025-05-29 10:35:22,011 - DEBUG - Répartition types: [('autre', 2), ('ordinateur', 2)]
+2025-05-29 10:35:22,011 - DEBUG - Répartition services: [('Comptabilité', 2)]
+2025-05-29 10:35:22,011 - DEBUG - Répartition employés: [('Ressources Humaines', 'Comptabilité', 1), ('IT Department', 'IT Support', 2)]
+2025-05-29 10:35:22,011 - DEBUG - Répartition matériel direction/service: [('N/A', 'Comptabilité', 2)]
+2025-05-29 10:35:22,063 - INFO - 127.0.0.1 - - [29/May/2025 10:35:22] "GET /dashboard HTTP/1.1" 200 -
+2025-05-29 10:35:22,123 - INFO - 127.0.0.1 - - [29/May/2025 10:35:22] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 10:35:22,247 - INFO - 127.0.0.1 - - [29/May/2025 10:35:22] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 10:44:19,892 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:44:19,989 - INFO -  * Restarting with stat
+2025-05-29 10:44:20,765 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 10:44:20,902 - INFO -  * Restarting with stat
+2025-05-29 11:10:57,344 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 11:10:57,345 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 11:10:57,352 - INFO -  * Restarting with stat
+2025-05-29 11:10:58,992 - WARNING -  * Debugger is active!
+2025-05-29 11:10:59,002 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:11:02,340 - INFO - 127.0.0.1 - - [29/May/2025 11:11:02] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-29 11:11:02,353 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:11:02,470 - INFO - 127.0.0.1 - - [29/May/2025 11:11:02] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-05-29 11:11:02,755 - INFO - 127.0.0.1 - - [29/May/2025 11:11:02] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:11:02,835 - INFO - 127.0.0.1 - - [29/May/2025 11:11:02] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 11:11:02,931 - INFO - 127.0.0.1 - - [29/May/2025 11:11:02] "GET /login?__debugger__=yes&cmd=resource&f=console.png&s=0ZmfUpEFrwiuaXSs46RJ HTTP/1.1" 200 -
+2025-05-29 11:11:03,303 - INFO - 127.0.0.1 - - [29/May/2025 11:11:03] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-29 11:11:20,245 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:11:20,338 - INFO - 127.0.0.1 - - [29/May/2025 11:11:20] "[35m[1mGET /login HTTP/1.1[0m" 500 -
+2025-05-29 11:11:20,549 - INFO - 127.0.0.1 - - [29/May/2025 11:11:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-05-29 11:11:20,688 - INFO - 127.0.0.1 - - [29/May/2025 11:11:20] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-05-29 11:11:21,025 - INFO - 127.0.0.1 - - [29/May/2025 11:11:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png&s=0ZmfUpEFrwiuaXSs46RJ HTTP/1.1[0m" 304 -
+2025-05-29 11:11:21,287 - INFO - 127.0.0.1 - - [29/May/2025 11:11:21] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-05-29 11:11:28,611 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:11:28,624 - INFO - 127.0.0.1 - - [29/May/2025 11:11:28] "GET /login HTTP/1.1" 200 -
+2025-05-29 11:11:28,916 - INFO - 127.0.0.1 - - [29/May/2025 11:11:28] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:14:16,510 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-29 11:14:16,680 - INFO -  * Restarting with stat
+2025-05-29 11:14:18,509 - WARNING -  * Debugger is active!
+2025-05-29 11:14:18,520 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:15:05,856 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\wsgi.py', reloading
+2025-05-29 11:15:06,018 - INFO -  * Restarting with stat
+2025-05-29 11:15:07,728 - WARNING -  * Debugger is active!
+2025-05-29 11:15:07,739 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:18:31,497 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:18:31,632 - INFO - User admin@example.com logged in successfully
+2025-05-29 11:18:31,635 - INFO - 127.0.0.1 - - [29/May/2025 11:18:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 11:18:31,643 - DEBUG - Accessed index route
+2025-05-29 11:18:31,701 - INFO - 127.0.0.1 - - [29/May/2025 11:18:31] "GET / HTTP/1.1" 200 -
+2025-05-29 11:18:31,960 - INFO - 127.0.0.1 - - [29/May/2025 11:18:31] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:18:32,074 - INFO - 127.0.0.1 - - [29/May/2025 11:18:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 11:18:32,386 - DEBUG - Accessed api_stats route
+2025-05-29 11:18:32,393 - INFO - 127.0.0.1 - - [29/May/2025 11:18:32] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 11:28:45,732 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 11:28:45,900 - INFO -  * Restarting with stat
+2025-05-29 11:28:53,180 - WARNING -  * Debugger is active!
+2025-05-29 11:28:53,198 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:29:29,894 - INFO - 127.0.0.1 - - [29/May/2025 11:29:29] "[32mGET /logout HTTP/1.1[0m" 302 -
+2025-05-29 11:29:30,004 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:29:30,015 - INFO - 127.0.0.1 - - [29/May/2025 11:29:30] "GET /login?next=http://localhost:5000/logout HTTP/1.1" 200 -
+2025-05-29 11:29:30,292 - INFO - 127.0.0.1 - - [29/May/2025 11:29:30] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:29:36,160 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:29:36,209 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:29:36,210 - INFO - 127.0.0.1 - - [29/May/2025 11:29:36] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:29:36,468 - INFO - 127.0.0.1 - - [29/May/2025 11:29:36] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:30:14,704 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:30:14,723 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:30:14,724 - INFO - 127.0.0.1 - - [29/May/2025 11:30:14] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:30:14,761 - INFO - 127.0.0.1 - - [29/May/2025 11:30:14] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:30:21,039 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:30:21,056 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:30:21,057 - INFO - 127.0.0.1 - - [29/May/2025 11:30:21] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:30:21,348 - INFO - 127.0.0.1 - - [29/May/2025 11:30:21] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:32:27,116 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:32:27,140 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:32:27,141 - INFO - 127.0.0.1 - - [29/May/2025 11:32:27] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:32:27,177 - INFO - 127.0.0.1 - - [29/May/2025 11:32:27] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:32:28,154 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:32:28,171 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:32:28,173 - INFO - 127.0.0.1 - - [29/May/2025 11:32:28] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:32:28,459 - INFO - 127.0.0.1 - - [29/May/2025 11:32:28] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:32:35,858 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:32:35,873 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:32:35,874 - INFO - 127.0.0.1 - - [29/May/2025 11:32:35] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:32:35,907 - INFO - 127.0.0.1 - - [29/May/2025 11:32:35] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:33:05,523 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\test_db.py', reloading
+2025-05-29 11:33:05,716 - INFO -  * Restarting with stat
+2025-05-29 11:33:07,554 - WARNING -  * Debugger is active!
+2025-05-29 11:33:07,564 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:34:07,533 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 11:34:07,827 - INFO -  * Restarting with stat
+2025-05-29 11:34:14,064 - WARNING -  * Debugger is active!
+2025-05-29 11:34:14,083 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:34:14,344 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:34:14,808 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:34:14,809 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:34:14,835 - INFO - 127.0.0.1 - - [29/May/2025 11:34:14] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:34:15,112 - INFO - 127.0.0.1 - - [29/May/2025 11:34:15] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:34:17,927 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:34:17,945 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:34:17,945 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:34:17,947 - INFO - 127.0.0.1 - - [29/May/2025 11:34:17] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:34:18,243 - INFO - 127.0.0.1 - - [29/May/2025 11:34:18] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:36:13,480 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:36:13,499 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:36:13,499 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:36:13,500 - INFO - 127.0.0.1 - - [29/May/2025 11:36:13] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:36:13,528 - INFO - 127.0.0.1 - - [29/May/2025 11:36:13] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:41:34,880 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:41:34,900 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:41:34,900 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:41:34,901 - INFO - 127.0.0.1 - - [29/May/2025 11:41:34] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:41:34,936 - INFO - 127.0.0.1 - - [29/May/2025 11:41:34] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:41:35,146 - INFO - 127.0.0.1 - - [29/May/2025 11:41:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 11:41:46,017 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:41:46,034 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:41:46,035 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:41:46,036 - INFO - 127.0.0.1 - - [29/May/2025 11:41:46] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:41:46,067 - INFO - 127.0.0.1 - - [29/May/2025 11:41:46] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:43:11,756 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 11:43:14,844 - INFO -  * Restarting with stat
+2025-05-29 11:43:16,958 - WARNING -  * Debugger is active!
+2025-05-29 11:43:16,972 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:43:17,101 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:43:17,105 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:43:17,180 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:17,180 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:17,195 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:17,200 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:17,213 - INFO - 127.0.0.1 - - [29/May/2025 11:43:17] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:43:17,222 - INFO - 127.0.0.1 - - [29/May/2025 11:43:17] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:43:17,454 - INFO - 127.0.0.1 - - [29/May/2025 11:43:17] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:43:26,351 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:43:26,369 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:26,369 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:26,370 - INFO - 127.0.0.1 - - [29/May/2025 11:43:26] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:43:26,399 - INFO - 127.0.0.1 - - [29/May/2025 11:43:26] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:43:54,704 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:43:54,723 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:54,723 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:54,724 - INFO - 127.0.0.1 - - [29/May/2025 11:43:54] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:43:55,026 - INFO - 127.0.0.1 - - [29/May/2025 11:43:55] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:43:55,983 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:43:55,999 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:56,000 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:43:56,000 - INFO - 127.0.0.1 - - [29/May/2025 11:43:56] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:43:56,031 - INFO - 127.0.0.1 - - [29/May/2025 11:43:56] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:45:00,249 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:45:00,268 - ERROR - Database connection failed: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:45:00,268 - ERROR - Database error during login: ('28000', "[28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC Driver 17 for SQL Server][SQL Server]Login failed for user 'hamza'. (18456)")
+2025-05-29 11:45:00,269 - INFO - 127.0.0.1 - - [29/May/2025 11:45:00] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:45:00,307 - INFO - 127.0.0.1 - - [29/May/2025 11:45:00] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:45:21,818 - INFO -  * Detected change in 'C:\\Users\\hp\\PycharmProjects\\projet_stage\\flask_app.py', reloading
+2025-05-29 11:45:22,069 - INFO -  * Restarting with stat
+2025-05-29 11:45:25,230 - WARNING -  * Debugger is active!
+2025-05-29 11:45:25,241 - INFO -  * Debugger PIN: 547-924-811
+2025-05-29 11:45:25,343 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:45:25,466 - WARNING - Failed login attempt for admin@example.com
+2025-05-29 11:45:25,477 - INFO - 127.0.0.1 - - [29/May/2025 11:45:25] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:45:25,667 - INFO - 127.0.0.1 - - [29/May/2025 11:45:25] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:45:31,502 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:45:31,513 - INFO - User admin@example.com logged in successfully
+2025-05-29 11:45:31,514 - INFO - 127.0.0.1 - - [29/May/2025 11:45:31] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 11:45:31,809 - DEBUG - Accessed index route
+2025-05-29 11:45:31,834 - INFO - 127.0.0.1 - - [29/May/2025 11:45:31] "GET / HTTP/1.1" 200 -
+2025-05-29 11:45:32,174 - INFO - 127.0.0.1 - - [29/May/2025 11:45:32] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:45:32,175 - INFO - 127.0.0.1 - - [29/May/2025 11:45:32] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 11:45:32,435 - DEBUG - Accessed api_stats route
+2025-05-29 11:45:32,449 - INFO - 127.0.0.1 - - [29/May/2025 11:45:32] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 11:49:44,236 - DEBUG - Accessed index route
+2025-05-29 11:49:44,238 - INFO - 127.0.0.1 - - [29/May/2025 11:49:44] "GET / HTTP/1.1" 200 -
+2025-05-29 11:49:44,364 - INFO - 127.0.0.1 - - [29/May/2025 11:49:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:49:44,490 - INFO - 127.0.0.1 - - [29/May/2025 11:49:44] "[32mGET /api/stats HTTP/1.1[0m" 302 -
+2025-05-29 11:49:44,566 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:49:44,567 - INFO - 127.0.0.1 - - [29/May/2025 11:49:44] "GET /login?next=http://localhost:5000/api/stats HTTP/1.1" 200 -
+2025-05-29 11:49:44,692 - INFO - 127.0.0.1 - - [29/May/2025 11:49:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 11:49:46,730 - DEBUG - Accessed login route, method: GET
+2025-05-29 11:49:46,731 - INFO - 127.0.0.1 - - [29/May/2025 11:49:46] "GET /login HTTP/1.1" 200 -
+2025-05-29 11:49:47,036 - INFO - 127.0.0.1 - - [29/May/2025 11:49:47] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:49:52,743 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:49:52,771 - WARNING - Failed login attempt for admin@example.com
+2025-05-29 11:49:52,772 - INFO - 127.0.0.1 - - [29/May/2025 11:49:52] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:49:52,806 - INFO - 127.0.0.1 - - [29/May/2025 11:49:52] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:59:47,673 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:59:47,690 - WARNING - Failed login attempt for admin@example.com
+2025-05-29 11:59:47,690 - INFO - 127.0.0.1 - - [29/May/2025 11:59:47] "POST /login HTTP/1.1" 200 -
+2025-05-29 11:59:47,707 - INFO - 127.0.0.1 - - [29/May/2025 11:59:47] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 11:59:53,796 - DEBUG - Accessed login route, method: POST
+2025-05-29 11:59:53,807 - INFO - User admin@example.com logged in successfully
+2025-05-29 11:59:53,808 - INFO - 127.0.0.1 - - [29/May/2025 11:59:53] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 11:59:54,111 - DEBUG - Accessed index route
+2025-05-29 11:59:54,113 - INFO - 127.0.0.1 - - [29/May/2025 11:59:54] "GET / HTTP/1.1" 200 -
+2025-05-29 11:59:54,444 - INFO - 127.0.0.1 - - [29/May/2025 11:59:54] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:59:54,446 - INFO - 127.0.0.1 - - [29/May/2025 11:59:54] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 11:59:54,705 - DEBUG - Accessed api_stats route
+2025-05-29 11:59:54,707 - INFO - 127.0.0.1 - - [29/May/2025 11:59:54] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 11:59:56,453 - DEBUG - Total employés: 3
+2025-05-29 11:59:56,453 - DEBUG - Total articles: 4
+2025-05-29 11:59:56,453 - DEBUG - Articles affectés: 2
+2025-05-29 11:59:56,453 - DEBUG - Articles non affectés: 2
+2025-05-29 11:59:56,453 - DEBUG - Répartition types: [('autre', 2), ('ordinateur', 2)]
+2025-05-29 11:59:56,453 - DEBUG - Répartition services: [('Comptabilité', 2)]
+2025-05-29 11:59:56,453 - DEBUG - Répartition employés: [('Ressources Humaines', 'Comptabilité', 1), ('IT Department', 'IT Support', 2)]
+2025-05-29 11:59:56,454 - DEBUG - Répartition matériel direction/service: [('N/A', 'Comptabilité', 2)]
+2025-05-29 11:59:56,503 - INFO - 127.0.0.1 - - [29/May/2025 11:59:56] "GET /dashboard HTTP/1.1" 200 -
+2025-05-29 11:59:56,724 - INFO - 127.0.0.1 - - [29/May/2025 11:59:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:59:56,860 - INFO - 127.0.0.1 - - [29/May/2025 11:59:56] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 11:59:57,876 - DEBUG - Total employés: 3
+2025-05-29 11:59:57,876 - DEBUG - Total articles: 4
+2025-05-29 11:59:57,876 - DEBUG - Articles affectés: 2
+2025-05-29 11:59:57,876 - DEBUG - Articles non affectés: 2
+2025-05-29 11:59:57,876 - DEBUG - Répartition types: [('autre', 2), ('ordinateur', 2)]
+2025-05-29 11:59:57,877 - DEBUG - Répartition services: [('Comptabilité', 2)]
+2025-05-29 11:59:57,877 - DEBUG - Répartition employés: [('Ressources Humaines', 'Comptabilité', 1), ('IT Department', 'IT Support', 2)]
+2025-05-29 11:59:57,877 - DEBUG - Répartition matériel direction/service: [('N/A', 'Comptabilité', 2)]
+2025-05-29 11:59:57,879 - INFO - 127.0.0.1 - - [29/May/2025 11:59:57] "GET /dashboard HTTP/1.1" 200 -
+2025-05-29 11:59:57,985 - INFO - 127.0.0.1 - - [29/May/2025 11:59:57] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 11:59:58,139 - INFO - 127.0.0.1 - - [29/May/2025 11:59:58] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:00:12,085 - DEBUG - Accessed affectations route
+2025-05-29 12:00:12,116 - INFO - 127.0.0.1 - - [29/May/2025 12:00:12] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 12:00:12,396 - INFO - 127.0.0.1 - - [29/May/2025 12:00:12] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:00:12,471 - INFO - 127.0.0.1 - - [29/May/2025 12:00:12] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,351 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "GET /materiel HTTP/1.1" 200 -
+2025-05-29 12:00:18,395 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,544 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,711 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,712 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,715 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:00:18,773 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-29 12:00:18,775 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-29 12:00:18,855 - INFO - 127.0.0.1 - - [29/May/2025 12:00:18] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-29 12:00:19,030 - INFO - 127.0.0.1 - - [29/May/2025 12:00:19] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-29 12:00:19,031 - INFO - 127.0.0.1 - - [29/May/2025 12:00:19] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-29 12:00:20,494 - DEBUG - Accessed affectations route
+2025-05-29 12:00:20,498 - INFO - 127.0.0.1 - - [29/May/2025 12:00:20] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 12:00:20,604 - INFO - 127.0.0.1 - - [29/May/2025 12:00:20] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:00:20,756 - INFO - 127.0.0.1 - - [29/May/2025 12:00:20] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:00:36,458 - DEBUG - Accessed ajouter_affectation route
+2025-05-29 12:00:36,495 - INFO - Added affectation: Article 18, Type EMPLOYEE, Target dadada
+2025-05-29 12:00:36,497 - INFO - 127.0.0.1 - - [29/May/2025 12:00:36] "[32mPOST /affectation/ajouter HTTP/1.1[0m" 302 -
+2025-05-29 12:00:36,774 - DEBUG - Accessed affectations route
+2025-05-29 12:00:36,779 - INFO - 127.0.0.1 - - [29/May/2025 12:00:36] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 12:00:37,116 - INFO - 127.0.0.1 - - [29/May/2025 12:00:37] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:00:37,117 - INFO - 127.0.0.1 - - [29/May/2025 12:00:37] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:16,655 - INFO - 127.0.0.1 - - [29/May/2025 12:36:16] "[32mGET /dashboard HTTP/1.1[0m" 302 -
+2025-05-29 12:36:16,793 - DEBUG - Accessed login route, method: GET
+2025-05-29 12:36:16,794 - INFO - 127.0.0.1 - - [29/May/2025 12:36:16] "GET /login HTTP/1.1" 200 -
+2025-05-29 12:36:16,921 - INFO - 127.0.0.1 - - [29/May/2025 12:36:16] "[36mGET /static/images/background.jpg HTTP/1.1[0m" 304 -
+2025-05-29 12:36:17,153 - INFO - 127.0.0.1 - - [29/May/2025 12:36:17] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-29 12:36:30,046 - DEBUG - Accessed login route, method: POST
+2025-05-29 12:36:30,082 - INFO - User admin@example.com logged in successfully
+2025-05-29 12:36:30,083 - INFO - 127.0.0.1 - - [29/May/2025 12:36:30] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-05-29 12:36:30,348 - DEBUG - Accessed index route
+2025-05-29 12:36:30,350 - INFO - 127.0.0.1 - - [29/May/2025 12:36:30] "GET / HTTP/1.1" 200 -
+2025-05-29 12:36:30,704 - INFO - 127.0.0.1 - - [29/May/2025 12:36:30] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:36:30,706 - INFO - 127.0.0.1 - - [29/May/2025 12:36:30] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:30,967 - DEBUG - Accessed api_stats route
+2025-05-29 12:36:30,972 - INFO - 127.0.0.1 - - [29/May/2025 12:36:30] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 12:36:33,256 - DEBUG - Accessed liste_inventaire route
+2025-05-29 12:36:33,355 - INFO - 127.0.0.1 - - [29/May/2025 12:36:33] "GET /liste_inventaire HTTP/1.1" 200 -
+2025-05-29 12:36:33,567 - INFO - 127.0.0.1 - - [29/May/2025 12:36:33] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:36:33,694 - INFO - 127.0.0.1 - - [29/May/2025 12:36:33] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:44,431 - DEBUG - Accessed affectations route
+2025-05-29 12:36:44,442 - INFO - 127.0.0.1 - - [29/May/2025 12:36:44] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 12:36:44,560 - INFO - 127.0.0.1 - - [29/May/2025 12:36:44] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:36:44,686 - INFO - 127.0.0.1 - - [29/May/2025 12:36:44] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,219 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "GET /materiel HTTP/1.1" 200 -
+2025-05-29 12:36:50,514 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,582 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/images/20_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,583 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,584 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/images/9e405382ed67484abf681addf07713fc_9da24c35241c4df3bb249819ee50eb53_telecharger_2.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,589 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/images/8708440c296843beacf9814a6e0adc2c_0a5cc46d5ba54cdf9055c05198d10369_pc.jpeg HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,603 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "GET /generer_code_barre/17 HTTP/1.1" 200 -
+2025-05-29 12:36:50,827 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "GET /generer_code_barre/18 HTTP/1.1" 200 -
+2025-05-29 12:36:50,902 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "[36mGET /static/images/ba1d0deb533f4b08af527825e487f464_0f00bbba0602413e9d1f40e8a6bd1bb3_projecteur.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:50,909 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "GET /generer_code_barre/19 HTTP/1.1" 200 -
+2025-05-29 12:36:50,913 - INFO - 127.0.0.1 - - [29/May/2025 12:36:50] "GET /generer_code_barre/20 HTTP/1.1" 200 -
+2025-05-29 12:36:55,342 - DEBUG - Accessed index route
+2025-05-29 12:36:55,344 - INFO - 127.0.0.1 - - [29/May/2025 12:36:55] "GET / HTTP/1.1" 200 -
+2025-05-29 12:36:55,429 - DEBUG - Accessed index route
+2025-05-29 12:36:55,431 - INFO - 127.0.0.1 - - [29/May/2025 12:36:55] "GET / HTTP/1.1" 200 -
+2025-05-29 12:36:56,197 - INFO - 127.0.0.1 - - [29/May/2025 12:36:56] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:36:57,439 - INFO - 127.0.0.1 - - [29/May/2025 12:36:57] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:36:59,076 - DEBUG - Accessed api_stats route
+2025-05-29 12:36:59,096 - INFO - 127.0.0.1 - - [29/May/2025 12:36:59] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 12:36:59,974 - DEBUG - Accessed liste_inventaire route
+2025-05-29 12:37:00,017 - INFO - 127.0.0.1 - - [29/May/2025 12:37:00] "GET /liste_inventaire HTTP/1.1" 200 -
+2025-05-29 12:37:00,329 - INFO - 127.0.0.1 - - [29/May/2025 12:37:00] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:37:00,427 - INFO - 127.0.0.1 - - [29/May/2025 12:37:00] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:46:41,977 - DEBUG - Accessed index route
+2025-05-29 12:46:41,979 - INFO - 127.0.0.1 - - [29/May/2025 12:46:41] "GET / HTTP/1.1" 200 -
+2025-05-29 12:46:42,118 - INFO - 127.0.0.1 - - [29/May/2025 12:46:42] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:46:42,244 - INFO - 127.0.0.1 - - [29/May/2025 12:46:42] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 12:46:42,320 - DEBUG - Accessed api_stats route
+2025-05-29 12:46:42,333 - INFO - 127.0.0.1 - - [29/May/2025 12:46:42] "GET /api/stats HTTP/1.1" 200 -
+2025-05-29 12:46:49,161 - DEBUG - Accessed affectations route
+2025-05-29 12:46:49,165 - INFO - 127.0.0.1 - - [29/May/2025 12:46:49] "GET /affectations HTTP/1.1" 200 -
+2025-05-29 12:46:49,472 - INFO - 127.0.0.1 - - [29/May/2025 12:46:49] "[36mGET /static/css/styles.css HTTP/1.1[0m" 304 -
+2025-05-29 12:46:49,504 - INFO - 127.0.0.1 - - [29/May/2025 12:46:49] "[36mGET /static/images/logo.png HTTP/1.1[0m" 304 -
+2025-05-29 14:02:27,776 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 14:02:27,776 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 14:02:27,786 - INFO -  * Restarting with stat
+2025-05-29 14:02:29,957 - WARNING -  * Debugger is active!
+2025-05-29 14:02:29,970 - INFO -  * Debugger PIN: 547-924-811

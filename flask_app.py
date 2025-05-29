@@ -5,7 +5,7 @@ from werkzeug.utils import secure_filename
 import uuid
 import logging
 from datetime import datetime, date
-from flask_bcrypt import Bcrypt
+from passlib.handlers.pbkdf2 import pbkdf2_sha256
 from functools import wraps
 from io import BytesIO
 import pandas as pd
@@ -23,7 +23,7 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=12)
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SECURE'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
-bcrypt = Bcrypt(app)
+
 
 app.config['BARCODE_FOLDER'] = 'static/barcodes'
 
@@ -134,7 +134,7 @@ def login():
 
             if user:
                 try:
-                    password_matches = bcrypt.check_password_hash(user.Password, password)
+                    password_matches = pbkdf2_sha256.verify(password, user.Password)
                 except ValueError as e:
                     logger.error(f"Invalid password format for user {email}: {str(e)}")
                     flash('Email ou mot de passe incorrect.', 'danger')
@@ -226,7 +226,7 @@ def admin_add_user():
                 flash('Cet email est déjà utilisé.', 'danger')
                 return redirect(request.url)
 
-            hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+            hashed_password = pbkdf2_sha256.hash(password)
             cursor.execute("INSERT INTO [User] (Email, Password, Role) VALUES (?, ?, ?)",
                            (email, hashed_password, role))
             conn.commit()
@@ -287,7 +287,7 @@ def admin_edit_user(id):
                 return redirect(request.url)
 
             if password:
-                hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+                hashed_password = pbkdf2_sha256.hash(password)
                 cursor.execute("UPDATE [User] SET Email = ?, Password = ?, Role = ? WHERE ID_User = ?",
                                (email, hashed_password, role, id))
             else:
@@ -363,12 +363,12 @@ def profile():
             cursor = conn.cursor()
             cursor.execute("SELECT Password FROM [User] WHERE ID_User = ?", (session['user_id'],))
             user = cursor.fetchone()
-            if not user or not bcrypt.check_password_hash(user[0], current_password):
+            if not user or not pbkdf2_sha256.verify(current_password, user[0]):
                 conn.close()
                 flash('Mot de passe actuel incorrect.', 'danger')
                 return redirect(request.url)
 
-            hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
+            hashed_password = pbkdf2_sha256.hash(new_password)
             cursor.execute("UPDATE [User] SET Password = ? WHERE ID_User = ?",
                            (hashed_password, session['user_id']))
             conn.commit()

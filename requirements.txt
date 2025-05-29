@@ -1,5 +1,5 @@
 flask
-flask-bcrypt
+passlib
 pyodbc
 wfastcgi
 pandas

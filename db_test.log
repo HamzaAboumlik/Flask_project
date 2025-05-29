@@ -1,0 +1,1 @@
+2025-05-29 11:33:17,689 - ERROR - Database connection error: ('28000', "[28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456) (SQLDriverConnect); [28000] [Microsoft][ODBC SQL Server Driver][SQL Server]Login failed for user 'hamza'. (18456)")
