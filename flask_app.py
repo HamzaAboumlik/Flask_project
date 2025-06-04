@@ -21,11 +21,14 @@ app.config['UPLOAD_FOLDER'] = os.path.join(app.static_folder, 'images')
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hours=12)
 app.config['SESSION_COOKIE_HTTPONLY'] = True
-app.config['SESSION_COOKIE_SECURE'] = True
+app.config['SESSION_COOKIE_SECURE'] = False
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_PATH'] = '/projet_stage/'
+app.secret_key = 'hamza'
+
+app.config['BARCODE_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static', 'barcodes')
 
 
-app.config['BARCODE_FOLDER'] = 'static/barcodes'
 
 os.makedirs(app.config['BARCODE_FOLDER'], exist_ok=True)
 
